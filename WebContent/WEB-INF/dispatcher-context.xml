@@ -66,9 +66,9 @@
 		<!-- On crée le DataSource -->
 	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost:3306/nevermarchealone" />
-		<property name="username" value="admin" />
-		<property name="password" value="mdp" />
+		<property name="url" value="jdbc:mysql://172.31.2.143/nevermarchealone" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
 	</bean>
 
 	<!-- On crée un entityManagerFactory local à partir de la dataSource -->

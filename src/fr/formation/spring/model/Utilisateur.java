@@ -25,7 +25,27 @@ public class Utilisateur {
 	
 	@NotEmpty(message="Password est obligatoire")
 	private String password;
+	@NotEmpty(message="sexe est obligatoire")
+	private String sexe;
+	@NotEmpty(message="sexe est obligatoire")
+	private String etat;
 	
+
+	public String getEtat() {
+		return etat;
+	}
+
+	public void setEtat(String etat) {
+		this.etat = etat;
+	}
+
+	public String getSexe() {
+		return sexe;
+	}
+
+	public void setSexe(String sexe) {
+		this.sexe = sexe;
+	}
 
 	public int getId() {
 		return id;

@@ -21,5 +21,9 @@
 		<put-attribute name="title" value="title.subscribe" />
 		<put-attribute name="body" value="/WEB-INF/views/jsp/subscribe.jsp" />
 	</definition>
-	
+	<!-- Configuration de la vue "subscribe" -->
+	<definition name="CGU" extends="base.definition">
+		<put-attribute name="title" value="title.cgu" />
+		<put-attribute name="body" value="/WEB-INF/views/jsp/cgu.jsp" />
+	</definition>
 </tiles-definitions>

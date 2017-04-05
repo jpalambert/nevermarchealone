@@ -46,4 +46,8 @@ public class AccountController {
 		return new FormUser();
 	}
 
+	@RequestMapping(value = "/cgu", method = RequestMethod.GET)
+	public String cgu(Model model) {
+		return "cgu";
+}
 }

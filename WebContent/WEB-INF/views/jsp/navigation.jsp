@@ -5,7 +5,7 @@
 <nav>
 	<div class="nav-wrapper">
 		<div class="container">
-			<a href="#" class="brand-logo">Spring MVC - ${ utilisateur }</a>
+			<a href="#" class="brand-logo">Never Marche Alone - ${ utilisateur }</a>
 			
 			<c:if test="${ utilisateur != null }">
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
