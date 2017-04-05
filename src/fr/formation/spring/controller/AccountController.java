@@ -40,7 +40,7 @@ public class AccountController {
 			return "subscribe";
 		}
 		System.out.println(formUser.toString());
-		return "redirect:/home/" + formUser.getPrenom();
+		return "redirect:/recherche";
 	}
 	
 

@@ -45,4 +45,14 @@
 	</definition>
 	
 	
+	<!-- Configuration de la vue "rechercheUtilisateur" -->
+	<definition name="rechercheUtilisateur" extends="base.definition">
+		<put-attribute name="title" value="title.rechercheUtilisateur" />
+		<put-attribute name="body" value="/WEB-INF/views/jsp/rechercheUtilisateur.jsp" />
+	</definition>
+		<!-- Configuration de la vue "rechercheAccompagnateur" -->
+	<definition name="rechercheAccompagnateur" extends="base.definition">
+		<put-attribute name="title" value="title.rechercheAccompagnateur" />
+		<put-attribute name="body" value="/WEB-INF/views/jsp/rechercheAccompagnateur.jsp" />
+	</definition>
 </tiles-definitions>

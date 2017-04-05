@@ -32,25 +32,22 @@
 			<td><form:errors path="confirmPassword" /></td>
 		</tr>
 		<tr>
-		<td>
-			<form:radiobutton path="sexe" value="M" />
-			homme</td>
+			<td><form:radiobutton path="sexe" value="M" /> homme</td>
 
-		<td><form:radiobutton path="sexe" value="F" />
-			Femme</td>
+			<td><form:radiobutton path="sexe" value="F" /> Femme</td>
 		</tr>
-<td>
-			<form:radiobutton path="etat" value="accompagnateur" />
-			je suis un accompagnateur</td>
+		<td><form:radiobutton path="etat" value="accompagnateur" /> je
+			suis un accompagnateur</td>
 
-		<td><form:radiobutton path="etat" value="accompagné" />
-			je suis un accompagné</td>
+		<td><form:radiobutton path="etat" value="accompagné" /> je suis
+			un accompagné</td>
 		</tr>
 
 		<tr>
 			<td colspan="2"><input type="submit" value="S’inscrire" /></td>
 		</tr>
 	</table>
-	<p>en vous connectant à ce site vous acceptez automatiquement d'être géolocalisé</p>
+	<p>en vous connectant à ce site vous acceptez automatiquement
+		d'être géolocalisé</p>
 </form:form>
 <tr>

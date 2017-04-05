@@ -10,8 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import fr.formation.spring.model.Utilisateur;
 
-
-
 @Repository
 @Transactional
 public class UtilisateurDAO extends DAO<Utilisateur>
@@ -27,9 +25,6 @@ public class UtilisateurDAO extends DAO<Utilisateur>
 		return this.em.createQuery("SELECT p FROM Utilisateur u", Utilisateur.class).getResultList();
 	}
 	
-
-	
-
 	@Override
 	public Utilisateur save(Utilisateur object) {
 		return this.em.merge(object);
