@@ -9,6 +9,12 @@
 		<put-attribute name="navigation" value="/WEB-INF/views/jsp/navigation.jsp" />
 		<put-attribute name="body" value="" />
 	</definition>
+	
+	<!-- Config de la base des carte -->
+	<definition name="base.map" template="/WEB-INF/views/jsp/baseMap.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="" />
+	</definition>
 
 	<!-- Configuration de la vue "home" -->
 	<definition name="accueil" extends="base.definition">
@@ -31,5 +37,12 @@
 		<put-attribute name="title" value="title.connexion" />
 		<put-attribute name="body" value="/WEB-INF/views/jsp/connexion.jsp" />
 	</definition>
+	
+	<!-- Configuration de la vue "map" -->
+	<definition name="map" extends="base.map">
+		<put-attribute name="title" value="title.map" />
+		<put-attribute name="body" value="/WEB-INF/views/jsp/map.jsp" />
+	</definition>
+	
 	
 </tiles-definitions>

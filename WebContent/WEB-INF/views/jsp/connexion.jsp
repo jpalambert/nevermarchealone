@@ -30,5 +30,6 @@
 	<footer> 
 	<a href="<c:url value='/cgu' />" >cgu</a>
 </tr>
-          </footer>
+      
+      <a href="<c:url value='/map' />" >map</a>    </footer>
 
