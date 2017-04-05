@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
@@ -7,8 +6,7 @@
 
 
 <form:form method="post" action="rechercheUtilisateur">
-    <p>Aujourd'hui je souhaite :</p>
-    
+      
     
     <!--<form>
     <input type="radio" name="accompagnant" value="accompagnant">Accompagner</input>
@@ -18,7 +16,7 @@
     <%-- <td><form:radiobutton path="etat" value="accompagnateur" />Accompagner</td>
       <td><form:radiobutton path="etat" value="accompagne" />Etre accompagne</td> --%>
     
-    <p>Et je suis disponible pour une durée de :</p>
+    <p>Je suis disponible pour une durée de ... minutes :</p>
             <select name="temps">
                    <option selected>5</option>
                    <option selected>10</option>
@@ -67,12 +65,7 @@
         </tr>
     </table>
     
-    <p></p>
-
-    
-
-    
-        <table>
+       <table>
         <tr>
             <td><p>Qui peut discuter de :</p></td>
             <td><p>sur une zone de ... : </p></td>

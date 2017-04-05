@@ -18,4 +18,9 @@ public class RechercheController {
 		return "maps"; // va chercher la vue "maps" et donc la google map.
 
 	}*/
+	
+		@RequestMapping(value = "/rechercheAcc", method = RequestMethod.GET)
+		public String rechercheAccompagnateur(Model model) {
+			return "rechercheAccompagnateur";
+		}
 }
