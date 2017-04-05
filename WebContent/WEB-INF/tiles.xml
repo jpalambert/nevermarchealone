@@ -21,9 +21,15 @@
 		<put-attribute name="title" value="title.subscribe" />
 		<put-attribute name="body" value="/WEB-INF/views/jsp/subscribe.jsp" />
 	</definition>
-	<!-- Configuration de la vue "subscribe" -->
-	<definition name="CGU" extends="base.definition">
+	<!-- Configuration de la vue "cgu" -->
+	<definition name="cgu" extends="base.definition">
 		<put-attribute name="title" value="title.cgu" />
 		<put-attribute name="body" value="/WEB-INF/views/jsp/cgu.jsp" />
 	</definition>
+	<!-- Configuration de la vue "connexion" -->
+	<definition name="connexion" extends="base.definition">
+		<put-attribute name="title" value="title.connexion" />
+		<put-attribute name="body" value="/WEB-INF/views/jsp/connexion.jsp" />
+	</definition>
+	
 </tiles-definitions>

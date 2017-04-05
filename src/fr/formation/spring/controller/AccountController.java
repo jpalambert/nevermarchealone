@@ -16,7 +16,7 @@ import fr.formation.spring.model.FormUser;
 
 
 @Controller
-@RequestMapping("/account")
+
 public class AccountController {
 
 	@Autowired
@@ -25,8 +25,10 @@ public class AccountController {
 	@RequestMapping(value = "/subscribe", method = RequestMethod.GET)
 	public String subscribe(Model model) {
 		return "subscribe";
+		
+	
 	}
-
+			
 	@RequestMapping(value = "/subscribe", method = RequestMethod.POST)
 	public String subscribe(@Valid @ModelAttribute("user") FormUser formUser, BindingResult result, Model model) {
 		utilisateurValidator.validate(formUser, result);
@@ -40,14 +42,12 @@ public class AccountController {
 		System.out.println(formUser.toString());
 		return "redirect:/home/" + formUser.getPrenom();
 	}
+	
 
 	@ModelAttribute("user")
 	public FormUser initUtilisateur() {
 		return new FormUser();
 	}
 
-	@RequestMapping(value = "/cgu", method = RequestMethod.GET)
-	public String cgu(Model model) {
-		return "cgu";
-}
+
 }
