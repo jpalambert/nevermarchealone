@@ -31,5 +31,10 @@
 		<put-attribute name="title" value="title.connexion" />
 		<put-attribute name="body" value="/WEB-INF/views/jsp/connexion.jsp" />
 	</definition>
+	<!-- Configuration de la vue "rechercheUtilisateur" -->
+	<definition name="rechercheUtilisateur" extends="base.definition">
+		<put-attribute name="title" value="title.rechercheUtilisateur" />
+		<put-attribute name="body" value="/WEB-INF/views/jsp/rechercheUtilisateur.jsp" />
+	</definition>
 	
 </tiles-definitions>
