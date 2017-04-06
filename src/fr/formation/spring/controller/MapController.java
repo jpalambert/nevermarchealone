@@ -15,4 +15,9 @@ public class MapController {
 		return "map";
 	}
 	
+	@RequestMapping(value = "/map", method = RequestMethod.GET)
+	public String map2() {
+		return "map";
+	}
+	
 }

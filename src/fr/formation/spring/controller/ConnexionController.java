@@ -30,7 +30,7 @@ private UtilisateurDAO uDAO;
 	public String connexion(@ModelAttribute("user") Utilisateur utilisateur, BindingResult result, Model model) {
 		Utilisateur userVerif = uDAO.findByUsername(utilisateur.getUsername());
 		if (userVerif.getPassword().equals(utilisateur.getPassword())){
-			System.out.println("Bravo, tu es connecté!");
+			System.out.println("Bravo, tu es connecte!");
 			return "rechercheUtilisateur";
 		} else{
 			System.out.println("t'es vraiment une merde");
