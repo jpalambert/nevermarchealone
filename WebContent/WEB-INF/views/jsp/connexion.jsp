@@ -22,7 +22,7 @@
 			<td><input type="submit" value="Valider"></td>
 		</tr>
 	</table>
-
+	<tr><td><form:button type="submit">Envoi</form:button>
 
 </form:form>
 
