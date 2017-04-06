@@ -19,7 +19,7 @@
 			<td><form:errors path="password" /></td>
 		</tr>
 	</table>
-
+	<tr><td><form:button type="submit">Envoi</form:button>
 
 </form:form>
 

@@ -1,5 +1,8 @@
 package fr.formation.spring.model;
 
+import javax.persistence.Entity;
+
+@Entity
 public class FormUser extends Utilisateur {
 	
 	private String confirmPassword;
