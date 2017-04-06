@@ -6,7 +6,7 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 
 
-<form:form method="post" action="connexion" modelAttribute="user">
+<form:form method="post" action="rechercheAcc" modelAttribute="user">
 	<table>
 		<tr>
 			<td><form:label path="username">Username</form:label></td>
@@ -17,6 +17,9 @@
 			<td><form:label path="password">Password</form:label></td>
 			<td><form:password path="password" value="${user.password}" /></td>
 			<td><form:errors path="password" /></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="Valider"></td>
 		</tr>
 	</table>
 

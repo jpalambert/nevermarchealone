@@ -10,13 +10,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class MapController {
 
-
-
-	@RequestMapping(value = "/map", method = RequestMethod.GET)
+	@RequestMapping(value = "/map", method = RequestMethod.POST)
 	public String map() {
 		return "map";
-		
-	
 	}
 	
 }

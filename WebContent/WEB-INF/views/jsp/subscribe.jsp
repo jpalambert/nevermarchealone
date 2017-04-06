@@ -3,7 +3,8 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 
-<form:form method="post" action="subscribe" modelAttribute="user">
+
+<form:form method="post" action="rechercheAcc" modelAttribute="user">
 	<table>
 		<tr>
 			<td><form:label path="prenom">Prénom</form:label></td>

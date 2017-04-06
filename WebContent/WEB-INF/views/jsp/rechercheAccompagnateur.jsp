@@ -5,22 +5,16 @@
 
 
 
-<form:form method="post" action="rechercheUtilisateur">
+<form:form method="post" action="map">
     
     <p>Je suis disponible pour une durée de ... minutes :</p>
             <select name="temps">
-            	<option selected>5</option>
-                <option selected>10</option>
-                <option selected>15</option>
-                <option selected>20</option>
-                <option selected>25</option>
-                <option selected>30</option>
-                <option selected>35</option>
-                <option selected>40</option>
-                <option selected>45</option>
-                <option selected>50</option>
-                <option selected>55</option>
-                <option selected>60 et +</option>
+            	<option selected>0 - 30min</option>
+                <option selected>30min - 1h00</option>
+                <option selected>1h00 - 1h30</option>
+                <option selected>1h30 - 2h00</option>
+                <option selected>2h00 - 2h30</option>
+                <option selected>2h30 - 3h00</option>
              </select>
 
     <table>
