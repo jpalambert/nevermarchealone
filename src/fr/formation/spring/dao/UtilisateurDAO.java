@@ -16,11 +16,6 @@ public class UtilisateurDAO extends DAO<Utilisateur>
 {
 
 	@Override
-	public Utilisateur find(int id) {
- return this.em.find(Utilisateur.class, id);
-	}
-
-	@Override
 	public List<Utilisateur> findAll() {
 		return this.em.createQuery("SELECT p FROM Utilisateur u", Utilisateur.class).getResultList();
 	}
@@ -45,5 +40,9 @@ public class UtilisateurDAO extends DAO<Utilisateur>
 		catch (Exception ex) {
 			return false;
 		}
+	}
+	@Override
+	public Utilisateur findByUsername(String username){
+		return this.em.find(Utilisateur.class, username);
 	}
 }

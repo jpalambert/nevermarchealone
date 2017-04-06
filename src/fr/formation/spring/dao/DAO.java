@@ -13,9 +13,8 @@ public abstract class DAO<T>
 	public EntityManager getEntityManager() {
 		return em;
 	}
-	
-	public abstract T find(int id);
 	public abstract List<T> findAll();
 	public abstract T save(T object);
 	public abstract boolean delete(T object);
+	public abstract T findByUsername(String username);
 }
