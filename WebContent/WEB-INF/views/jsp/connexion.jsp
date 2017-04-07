@@ -73,7 +73,7 @@
 			<td><form:label path="lat">Latitude</form:label></td>
 			<td><form:input path="lat" value="" /></td>
 
-			<td><input type="submit" value="Valider"></td>
+			<td><button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-ok-sign" style="color:#4f4;"></span> Envoyer</button></td>
 		</tr>
 	</table>
 

@@ -32,7 +32,22 @@ public class AccountController {
 		
 	
 	}
-			
+		
+	@RequestMapping(value = "/rechercheacc", method = RequestMethod.GET)
+	public String rechercheacc(Model model) {
+		return "rechercheAccompagnateur";
+		
+	
+	}
+	
+	
+	@RequestMapping(value = "/recherche", method = RequestMethod.GET)
+	public String recherche(Model model) {
+		return "recherche";
+		
+	
+	}
+	
 	@RequestMapping(value = "/subscribe", method = RequestMethod.POST)
 	public String subscribe(@Valid @ModelAttribute("user") FormUser formUser, BindingResult result, Model model) {
 		utilisateurValidator.validate(formUser, result);

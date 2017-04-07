@@ -13,7 +13,7 @@ public class UtilisateurDAO extends DAO<Utilisateur> {
 
 	@Override
 	public List<Utilisateur> findAll() {
-		return this.em.createQuery("SELECT p FROM Utilisateur u", Utilisateur.class).getResultList();
+		return this.em.createQuery("SELECT u FROM Utilisateur u", Utilisateur.class).getResultList();
 	}
 
 	@Override
@@ -42,4 +42,8 @@ public class UtilisateurDAO extends DAO<Utilisateur> {
 	public Utilisateur findByUsername(String username) {
 		return this.em.find(Utilisateur.class, username);
 	}
+	@Override
+    public List<Utilisateur> findAllByEtat() {
+        return this.em.createQuery("SELECT u FROM Utilisateur u WHERE u.etat='accompagnateur'", Utilisateur.class).getResultList();
+    }
 }

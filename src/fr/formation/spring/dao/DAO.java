@@ -5,6 +5,8 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+import fr.formation.spring.model.Utilisateur;
+
 public abstract class DAO<T>
 {
 	@PersistenceContext
@@ -17,4 +19,6 @@ public abstract class DAO<T>
 	public abstract T save(T object);
 	public abstract boolean delete(T object);
 	public abstract T findByUsername(String username);
+	public abstract List<T> findAllByEtat() ;
+			
 }
