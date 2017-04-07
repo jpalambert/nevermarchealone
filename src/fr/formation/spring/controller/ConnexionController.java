@@ -34,6 +34,8 @@ private UtilisateurDAO uDAO;
 			userVerif.setEtat(utilisateur.getEtat());
 			uDAO.save(userVerif);
 			System.out.println(userVerif.getEtat());
+			
+			//redirection selon recherche souhaitee
 			if(utilisateur.getEtat().equals("accompagnateur"))
 			{
 				

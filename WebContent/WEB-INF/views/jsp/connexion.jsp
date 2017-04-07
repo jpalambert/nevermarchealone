@@ -33,7 +33,7 @@
 
 	
 
-
+<!--  -->
 
 
 <a href="<c:url value='/subscribe' />" >je ne possède pas de compte,
