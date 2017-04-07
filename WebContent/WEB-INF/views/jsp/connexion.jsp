@@ -6,7 +6,7 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 
 
-<form:form method="post" action="rechercheAcc" modelAttribute="user">
+<form:form method="post" action="connexion" modelAttribute="user">
 	<table>
 		<tr>
 			<td><form:label path="username">Username</form:label></td>
@@ -19,12 +19,22 @@
 			<td><form:errors path="password" /></td>
 		</tr>
 		<tr>
+			<td><form:radiobutton path="etat" value="accompagnateur" /> je
+			suis un accompagnateur</td>
+		
+			<td><form:radiobutton path="etat" value="accompagne" /> je suis
+			un accompagné</td>
+		</tr>
+		<tr>
 			<td><input type="submit" value="Valider"></td>
 		</tr>
 	</table>
-
-
 </form:form>
+
+	
+
+
+
 
 <a href="<c:url value='/subscribe' />" >je ne possède pas de compte,
 	je souhaite m'inscrire</a>

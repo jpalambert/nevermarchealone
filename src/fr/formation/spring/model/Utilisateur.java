@@ -17,7 +17,7 @@ public class Utilisateur {
 	@NotEmpty(message="Le nom est obligatoire")
 	private String nom;
 	
-	@NotEmpty(message="Le prénom est obligatoire")
+	@NotEmpty(message="Le prï¿½nom est obligatoire")
 	private String prenom;
 	
 	
@@ -26,8 +26,40 @@ public class Utilisateur {
 	private String password;
 	@NotEmpty(message="sexe est obligatoire")
 	private String sexe;
-	@NotEmpty(message="sexe est obligatoire")
+	//@NotEmpty(message="etat  est obligatoire")
 	private String etat;
+	
+	private long lat;
+	private long lng;
+	/**
+	 * @return the lat
+	 */
+	public long getLat() {
+		return lat;
+	}
+
+	/**
+	 * @param lat the lat to set
+	 */
+	public void setLat(long lat) {
+		this.lat = lat;
+	}
+
+	/**
+	 * @return the lng
+	 */
+	public long getLng() {
+		return lng;
+	}
+
+	/**
+	 * @param lng the lng to set
+	 */
+	public void setLng(long lng) {
+		this.lng = lng;
+	}
+
+	
 	
 
 	public String getEtat() {

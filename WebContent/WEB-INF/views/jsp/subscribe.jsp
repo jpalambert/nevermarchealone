@@ -4,7 +4,7 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 
 
-<form:form method="post" action="rechercheAcc" modelAttribute="user">
+<form:form method="post" action="subscribe" modelAttribute="user">
 	<table>
 		<tr>
 			<td><form:label path="prenom">Prénom</form:label></td>
@@ -36,14 +36,8 @@
 			<td><form:radiobutton path="sexe" value="M" /> homme</td>
 
 			<td><form:radiobutton path="sexe" value="F" /> Femme</td>
+			
 		</tr>
-		<td><form:radiobutton path="etat" value="accompagnateur" /> je
-			suis un accompagnateur</td>
-
-		<td><form:radiobutton path="etat" value="accompagné" /> je suis
-			un accompagné</td>
-		</tr>
-
 		<tr>
 			<td colspan="2"><input type="submit" value="S’inscrire" /></td>
 		</tr>

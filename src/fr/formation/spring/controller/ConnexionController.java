@@ -29,9 +29,22 @@ private UtilisateurDAO uDAO;
 	@RequestMapping(value = "/connexion", method = RequestMethod.POST)
 	public String connexion(@ModelAttribute("user") Utilisateur utilisateur, BindingResult result, Model model) {
 		Utilisateur userVerif = uDAO.findByUsername(utilisateur.getUsername());
-		if (userVerif.getPassword().equals(utilisateur.getPassword())){
-			System.out.println("Bravo, tu es connecte!");
-			return "rechercheUtilisateur";
+		if (userVerif.getPassword().equals(utilisateur.getPassword()))
+		{
+			userVerif.setEtat(utilisateur.getEtat());
+			uDAO.save(userVerif);
+			System.out.println(userVerif.getEtat());
+			if(utilisateur.getEtat().equals("accompagnateur"))
+			{
+				
+				System.out.println("Bravo, tu es connecte!");
+				return "rechercheAccompagnateur";
+			}
+			else
+			{
+				System.out.println("Bravo, tu es connecte!");
+				return "rechercheUtilisateur";
+			}
 		} else{
 			System.out.println("t'es vraiment une merde");
 			return "connexion";
