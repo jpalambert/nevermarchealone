@@ -1,12 +1,52 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-	
+
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<div id="map"></div>
 
+<script
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzIbC986mSIgdEtoVgoIBaPKQeViR_CrY&callback=initMap"
+	async defer>
+	
+</script>
 
 <form:form method="post" action="connexion" modelAttribute="user">
+	<script>
+		// Note: This example requires that you consent to location sharing when
+		// prompted by your browser. If you see the error "The Geolocation service
+		// failed.", it means you probably did not give permission for the browser to
+		// locate you.
+
+		function initMap() {
+			var map = new google.maps.Map(document.getElementById('map'), {
+				center : {
+					lat : -34.397,
+					lng : 150.644
+				},
+				zoom : 9
+			});
+			// Try HTML5 geolocation.
+			if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(function(position) {
+					var pos = {
+						lat : position.coords.latitude,
+						lng : position.coords.longitude
+					}
+					alert(pos.lat);
+					alert(pos.lng);
+					$("#lat").val(pos.lat);
+					$("#lng").val(pos.lng);
+				}, function() {
+					handleLocationError(true, infoWindow, map.getCenter());
+				});
+			} else {
+				// Browser doesn't support Geolocation
+				handleLocationError(false, infoWindow, map.getCenter());
+			}
+		}
+	</script>
 	<table>
 		<tr>
 			<td><form:label path="username">Username</form:label></td>
@@ -20,29 +60,36 @@
 		</tr>
 		<tr>
 			<td><form:radiobutton path="etat" value="accompagnateur" /> je
-			suis un accompagnateur</td>
-		
+				suis un accompagnateur</td>
+
 			<td><form:radiobutton path="etat" value="accompagne" /> je suis
-			un accompagné</td>
+				un accompagné</td>
 		</tr>
 		<tr>
+			<td><form:label path="lng">Longitude</form:label></td>
+			<td><form:input path="lng" value="" /></td>
+		</tr>
+		<tr>
+			<td><form:label path="lat">Latitude</form:label></td>
+			<td><form:input path="lat" value="" /></td>
+
 			<td><input type="submit" value="Valider"></td>
 		</tr>
 	</table>
-</form:form>
 
-	
+</form:form>
 
 <!--  -->
 
 
-<a href="<c:url value='/subscribe' />" >je ne possède pas de compte,
+<a href="<c:url value='/subscribe' />">je ne possède pas de compte,
 	je souhaite m'inscrire</a>
-	<tr>
+<tr>
 
-	<footer> 
-	<a href="<c:url value='/cgu' />" >cgu</a>
+	<footer>
+		<a href="<c:url value='/cgu' />">cgu</a>
 </tr>
-      
-      <a href="<c:url value='/map' />" >map</a>    </footer>
+
+<a href="<c:url value='/map' />">map</a>
+</footer>
 

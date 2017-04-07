@@ -1,6 +1,8 @@
 package fr.formation.spring.controller;
 
 
+import javax.security.auth.message.callback.PrivateKeyCallback.Request;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -29,9 +31,16 @@ private UtilisateurDAO uDAO;
 	@RequestMapping(value = "/connexion", method = RequestMethod.POST)
 	public String connexion(@ModelAttribute("user") Utilisateur utilisateur, BindingResult result, Model model) {
 		Utilisateur userVerif = uDAO.findByUsername(utilisateur.getUsername());
+	
+		System.out.println(utilisateur.getSexe());
+		System.out.println(utilisateur.getLat());
+		System.out.println(utilisateur.getUsername());
 		if (userVerif.getPassword().equals(utilisateur.getPassword()))
 		{
+			
 			userVerif.setEtat(utilisateur.getEtat());
+			userVerif.setLat(utilisateur.getLat());
+			userVerif.setLng(utilisateur.getLng());
 			uDAO.save(userVerif);
 			System.out.println(userVerif.getEtat());
 			

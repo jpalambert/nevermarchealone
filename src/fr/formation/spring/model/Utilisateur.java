@@ -7,60 +7,58 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import org.hibernate.validator.constraints.NotEmpty;
+
 @Entity
 public class Utilisateur {
-	
+
 	@Id
-    @Column(name="PER_USR")
+	@Column(name = "PER_USR")
 	private String username;
-	
-	@NotEmpty(message="Le nom est obligatoire")
+
+	@NotEmpty(message = "Le nom est obligatoire")
 	private String nom;
-	
-	@NotEmpty(message="Le pr�nom est obligatoire")
+
+	@NotEmpty(message = "Le pr�nom est obligatoire")
 	private String prenom;
-	
-	
-	
-	@NotEmpty(message="Password est obligatoire")
+
+	@NotEmpty(message = "Password est obligatoire")
 	private String password;
-	@NotEmpty(message="sexe est obligatoire")
+	@NotEmpty(message = "sexe est obligatoire")
 	private String sexe;
-	//@NotEmpty(message="etat  est obligatoire")
+
 	private String etat;
-	
-	private long lat;
-	private long lng;
+	private double lat;
+	private double lng;
+
 	/**
 	 * @return the lat
 	 */
-	public long getLat() {
+	public double getLat() {
 		return lat;
 	}
 
 	/**
-	 * @param lat the lat to set
+	 * @param lat
+	 *            the lat to set
 	 */
-	public void setLat(long lat) {
+	public void setLat(double lat) {
 		this.lat = lat;
 	}
 
 	/**
 	 * @return the lng
 	 */
-	public long getLng() {
+	public double getLng() {
 		return lng;
 	}
 
 	/**
-	 * @param lng the lng to set
+	 * @param lng
+	 *            the lng to set
 	 */
-	public void setLng(long lng) {
+	public void setLng(double lng) {
 		this.lng = lng;
 	}
-
-	
-	
 
 	public String getEtat() {
 		return etat;
@@ -77,7 +75,6 @@ public class Utilisateur {
 	public void setSexe(String sexe) {
 		this.sexe = sexe;
 	}
-
 
 	public Utilisateur() {
 		//

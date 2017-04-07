@@ -43,9 +43,7 @@ public class AccountController {
 			}
 			return "subscribe";
 		}
-		formUser.setLat(0);
-		formUser.setLng(0);
-		formUser.setEtat("etat");
+
 		
 		uDAO.save(formUser);
 		System.out.println(formUser.toString());
