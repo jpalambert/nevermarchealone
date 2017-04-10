@@ -16,7 +16,7 @@
     <%-- <td><form:radiobutton path="etat" value="accompagnateur" />Accompagner</td>
       <td><form:radiobutton path="etat" value="accompagne" />Etre accompagne</td> --%>
     
-    <p>Je suis disponible pour une durée de ... minutes :</p>
+    <p>Je suis disponible pour une durée de ... :</p>
             <select name="temps">
             	<option selected>0 - 30min</option>
                 <option selected>30min - 1h00</option>
@@ -90,3 +90,7 @@
     
     <input type="submit" value="Valider">
 </form:form>
+
+
+
+<a href="profilDetaille">Modifier profil</a>

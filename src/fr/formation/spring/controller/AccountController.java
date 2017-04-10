@@ -43,7 +43,7 @@ public class AccountController {
 	
 	@RequestMapping(value = "/recherche", method = RequestMethod.GET)
 	public String recherche(Model model) {
-		return "recherche";
+		return "rechercheUtilisateur";
 		
 	
 	}

@@ -1,7 +1,8 @@
 package fr.formation.spring.controller;
 
 
-import javax.security.auth.message.callback.PrivateKeyCallback.Request;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -29,12 +30,9 @@ private UtilisateurDAO uDAO;
 	}
 
 	@RequestMapping(value = "/connexion", method = RequestMethod.POST)
-	public String connexion(@ModelAttribute("user") Utilisateur utilisateur, BindingResult result, Model model) {
+	public String connexion(@ModelAttribute("user") Utilisateur utilisateur, BindingResult result, HttpServletRequest req) {
 		Utilisateur userVerif = uDAO.findByUsername(utilisateur.getUsername());
 	
-		System.out.println(utilisateur.getSexe());
-		System.out.println(utilisateur.getLat());
-		System.out.println(utilisateur.getUsername());
 		if (userVerif.getPassword().equals(utilisateur.getPassword()))
 		{
 			
@@ -47,12 +45,15 @@ private UtilisateurDAO uDAO;
 			//redirection selon recherche souhaitee
 			if(utilisateur.getEtat().equals("accompagnateur"))
 			{
-				
+				HttpSession session = req.getSession();
+				session.setAttribute("user", userVerif);
 				System.out.println("Bravo, tu es connecte!");
 				return "rechercheAccompagnateur";
 			}
 			else
 			{
+				HttpSession session = req.getSession();
+				session.setAttribute("user", userVerif);
 				System.out.println("Bravo, tu es connecte!");
 				return "rechercheUtilisateur";
 			}

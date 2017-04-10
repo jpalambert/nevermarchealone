@@ -2,10 +2,8 @@ package fr.formation.spring.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
+import java.util.List;
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
@@ -18,7 +16,7 @@ public class Utilisateur {
 	@NotEmpty(message = "Le nom est obligatoire")
 	private String nom;
 
-	@NotEmpty(message = "Le pr�nom est obligatoire")
+	@NotEmpty(message = "Le prenom est obligatoire")
 	private String prenom;
 
 	@NotEmpty(message = "Password est obligatoire")
@@ -30,7 +28,42 @@ public class Utilisateur {
 	private double lat;
 	private double lng;
 
+	private String bavard;
+	private String description;
+	//private List<String> hobbie;
+	
+	
+	
+		/**
+	 * @return the bavard
+	 */
+	public String getBavard() {
+		return bavard;
+	}
+
 	/**
+	 * @param bavard the bavard to set
+	 */
+	public void setBavard(String bavard) {
+		this.bavard = bavard;
+	}
+
+	/**
+	 * @return the description
+	 */
+	public String getDescription() {
+		return description;
+	}
+
+	/**
+	 * @param description the description to set
+	 */
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+
+		/**
 	 * @return the lat
 	 */
 	public double getLat() {
