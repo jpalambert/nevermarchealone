@@ -34,8 +34,6 @@
 						lat : position.coords.latitude,
 						lng : position.coords.longitude
 					}
-					alert(pos.lat);
-					alert(pos.lng);
 					$("#lat").val(pos.lat);
 					$("#lng").val(pos.lng);
 				}, function() {

@@ -15,7 +15,9 @@ public class MapController {
 	private UtilisateurDAO uDAO;
 
 	@RequestMapping(value = "/map", method = RequestMethod.POST)
-	public String map() {
+	public String map(HttpServletRequest req) {
+		req.setAttribute("listU", uDAO.findAllByEtat() );
+		System.out.println(uDAO.findAllByEtat().get(0).getUsername());
 		return "map";
 	}
 
