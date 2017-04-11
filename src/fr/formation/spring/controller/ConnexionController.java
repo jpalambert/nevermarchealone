@@ -1,6 +1,9 @@
 package fr.formation.spring.controller;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -26,7 +29,9 @@ private UtilisateurDAO uDAO;
 
 	@RequestMapping(value = "/connexion", method = RequestMethod.GET)
 	public String connexion(Model model) {
-		return "connexion";
+				return "connexion";
+		
+		
 	}
 
 	@RequestMapping(value = "/connexion", method = RequestMethod.POST)
