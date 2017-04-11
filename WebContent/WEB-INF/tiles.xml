@@ -75,4 +75,9 @@
 		<put-attribute name="title" value="title.profilDetaille" />
 		<put-attribute name="body" value="/WEB-INF/views/jsp/profilDetaille.jsp" />
 	</definition>
+				<!-- Configuration de la vue "commande" -->
+	<definition name="commande" extends="base.definition">
+		<put-attribute name="title" value="title.commande" />
+		<put-attribute name="body" value="/WEB-INF/views/jsp/commande.jsp" />
+	</definition>
 </tiles-definitions>
