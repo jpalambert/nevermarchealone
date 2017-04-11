@@ -48,8 +48,8 @@
                     var infoWindow${status.index} = new google.maps.InfoWindow({map : map});
                     infoWindow${status.index}.setContent('<b>'+'${user.username}'+'<br/>sexe : '+
                             '\n${user.sexe}'+'</b>'+
-                            '<form action="/tp-spring-mvc-1/connexion" method="get"><button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-ok-sign" style="color:#4f4;"></span> valider commande</button></form>'+
-                            '<form action="/tp-spring-mvc-1/rechercheacc" method="get"><button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-user" style="color:#4f4;"></span> profil détaillé</button></form>')
+                            '<form action="/tp-spring-mvc-1/commande" method="post"><input type="hidden" value="${user.username}" name="command"}/><button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-ok-sign" style="color:#4f4;"></span> valider commande</button></form>'+
+                            '<form action="/tp-spring-mvc-1/rechercheacc" method="post"><button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-user" style="color:#4f4;"></span> profil détaillé</button></form>')
                              infoWindow${status.index}.open(map, marker${status.index});
                 
                  

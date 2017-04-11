@@ -1,8 +1,11 @@
 package fr.formation.spring.controller;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -55,6 +58,15 @@ public class AccountController {
 		
 	
 	}
+	@RequestMapping(value = "/commande", method = RequestMethod.POST)
+	public String commande(HttpServletRequest req, HttpServletResponse resp, Model model) {
+		req.getParameter("command");
+		req.setAttribute("comcom", req.getParameter("command") );
+		System.out.println(req.getParameter("command"));
+		return "commande";
+		
+	
+	}
 	
 	@RequestMapping(value = "/subscribe", method = RequestMethod.POST)
 	public String subscribe(@Valid @ModelAttribute("user") FormUser formUser, BindingResult result, Model model) {
@@ -69,7 +81,7 @@ public class AccountController {
 
 		
 		uDAO.save(formUser);
-		System.out.println(formUser.toString());
+//		System.out.println(formUser.toString());
 		return "connexion";
 	}
 	
