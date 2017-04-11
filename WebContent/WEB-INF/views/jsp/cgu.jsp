@@ -5,26 +5,27 @@
 
 
 
-<p>Conditions générales d'utilisation du site Never Marche Alone
-
-ARTICLE 1 : Objet
+<center><h4>Conditions générales d'utilisation du site Never Marche Alone</h4></center>
+</br></br>
+<p>ARTICLE 1 :<p> Objet
 Les présentes « conditions générales d'utilisation » ont pour objet l'encadrement juridique des modalités de mise à disposition des services du site Never Marche Alone et leur utilisation par le client.
 Les conditions générales d'utilisation doivent être acceptées par tout Utilisateur souhaitant accéder au site. Elles constituent le contrat entre le site et l'Utilisateur. L’accès au site par l’Utilisateur signifie son acceptation des présentes conditions générales d’utilisation.
 Éventuellement :
 En cas de non-acceptation des conditions générales d'utilisation stipulées dans le présent contrat, l'Utilisateur se doit de renoncer à l'accès des services proposés par le site.
 Never Marche Alone se réserve le droit de modifier unilatéralement et à tout moment le contenu des présentes conditions générales d'utilisation.
-
-ARTICLE 2 : Mentions légales
+</br></br>
+<p>ARTICLE 2 : <p>
+Mentions légales
 L'édition du site Never Marche Alone est assurée par la Société Sopra Steria .
-
-ARTICLE 3 : Définitions
+</br></br>
+<p>ARTICLE 3 :<p>Définitions
 La présente clause a pour objet de définir les différents termes essentiels du contrat :
 Utilisateur : ce terme désigne toute personne qui utilise le site ou l'un des services proposés par le site.
 Contenu utilisateur : ce sont les données transmises par l'Utilisateur au sein du site.
 Membre : l'Utilisateur devient membre lorsqu'il est identifié sur le site.
 Identifiant et mot de passe : c'est l'ensemble des informations nécessaires à l'identification d'un Utilisateur sur le site. L'identifiant et le mot de passe permettent à l'Utilisateur d'accéder à des services réservés aux membres du site. Le mot de passe est confidentiel.
-
-ARTICLE 4 : accès aux services
+</br></br>
+<p>ARTICLE 4 :<p> accès aux services
 Le site permet à l'Utilisateur un accès gratuit aux services suivants :
 [articles d’information] ;
 [annonces classées] ;
@@ -38,45 +39,45 @@ Le site met en œuvre tous les moyens mis à sa disposition pour assurer un acc�
 Tout événement dû à un cas de force majeure ayant pour conséquence un dysfonctionnement du réseau ou du serveur n'engage pas la responsabilité de Never Marche Alone.
 L'accès aux services du site peut à tout moment faire l'objet d'une interruption, d'une suspension, d'une modification sans préavis pour une maintenance ou pour tout autre cas. L'Utilisateur s'oblige à ne réclamer aucune indemnisation suite à l'interruption, à la suspension ou à la modification du présent contrat.
 L'Utilisateur a la possibilité de contacter le site par messagerie électronique à l’adresse [contact@nomdusite.com].
-
-ARTICLE 5 : Propriété intellectuelle
+</br></br>
+<p>ARTICLE 5 :<p> Propriété intellectuelle
 Les marques, logos, signes et tout autre contenu du site font l'objet d'une protection par le Code de la propriété intellectuelle et plus particulièrement par le droit d'auteur.
 L'Utilisateur sollicite l'autorisation préalable du site pour toute reproduction, publication, copie des différents contenus.
 L'Utilisateur s'engage à une utilisation des contenus du site dans un cadre strictement privé. Une utilisation des contenus à des fins commerciales est strictement interdite.
 Tout contenu mis en ligne par l'Utilisateur est de sa seule responsabilité. L'Utilisateur s'engage à ne pas mettre en ligne de contenus pouvant porter atteinte aux intérêts de tierces personnes. Tout recours en justice engagé par un tiers lésé contre le site sera pris en charge par l'Utilisateur.
 Le contenu de l'Utilisateur peut être à tout moment et pour n'importe quelle raison supprimé ou modifié par le site. L'Utilisateur ne reçoit aucune justification et notification préalablement à la suppression ou à la modification du contenu Utilisateur.
-
-ARTICLE 6 : Données personnelles
+</br></br>
+<p>ARTICLE 6 :<p> Données personnelles
 Les informations demandées à l’inscription au site sont nécessaires et obligatoires pour la création du compte de l'Utilisateur. En particulier, l'adresse électronique pourra être utilisée par le site pour l'administration, la gestion et l'animation du service.
 Le site assure à l'Utilisateur une collecte et un traitement d'informations personnelles dans le respect de la vie privée conformément à la loi n°78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés. Le site est déclaré à la CNIL sous le numéro [numéro].
 En vertu des articles 39 et 40 de la loi en date du 6 janvier 1978, l'Utilisateur dispose d'un droit d'accès, de rectification, de suppression et d'opposition de ses données personnelles. L'Utilisateur exerce ce droit via :
 son espace personnel ;
 un formulaire de contact ;
 par mail à nevermarchealone@gmail.com ;
-
-ARTICLE 7 : Responsabilité et force majeure
+</br></br>
+<p>ARTICLE 7 :<p> Responsabilité et force majeure
 Les sources des informations diffusées sur le site sont réputées fiables. Toutefois, le site se réserve la faculté d'une non-garantie de la fiabilité des sources. Les informations données sur le site le sont à titre purement informatif. Ainsi, l'Utilisateur assume seul l'entière responsabilité de l'utilisation des informations et contenus du présent site.
 L'Utilisateur s'assure de garder son mot de passe secret. Toute divulgation du mot de passe, quelle que soit sa forme, est interdite.
 L'Utilisateur assume les risques liés à l'utilisation de son identifiant et mot de passe. Le site décline toute responsabilité.
 Tout usage du service par l'Utilisateur ayant directement ou indirectement pour conséquence des dommages doit faire l'objet d'une indemnisation au profit du site.
 Une garantie optimale de la sécurité et de la confidentialité des données transmises n'est pas assurée par le site. Toutefois, le site s'engage à mettre en œuvre tous les moyens nécessaires afin de garantir au mieux la sécurité et la confidentialité des données.
 La responsabilité du site ne peut être engagée en cas de force majeure ou du fait imprévisible et insurmontable d'un tiers.
-
-ARTICLE 8 : Liens hypertextes
+</br></br>
+<p>ARTICLE 8 :<p>Liens hypertextes
 De nombreux liens hypertextes sortants sont présents sur le site, cependant les pages web où mènent ces liens n'engagent en rien la responsabilité de Never Marche Alone qui n'a pas le contrôle de ces liens.
 L'Utilisateur s'interdit donc à engager la responsabilité du site concernant le contenu et les ressources relatives à ces liens hypertextes sortants.
-
-ARTICLE 9 : Évolution du contrat
+</br></br>
+<p>ARTICLE 9 :<p> Évolution du contrat
 Le site se réserve à tout moment le droit de modifier les clauses stipulées dans le présent contrat.
-
-ARTICLE 10 : Durée
+</br></br>
+<p>ARTICLE 10 :<p>Durée
 La durée du présent contrat est indéterminée. Le contrat produit ses effets à l'égard de l'Utilisateur à compter de l'utilisation du service.
-
-ARTICLE 11 : Droit applicable et juridiction compétente
+</br></br>
+<p>ARTICLE 11 :<p> Droit applicable et juridiction compétente
 La législation française s'applique au présent contrat. En cas d'absence de résolution amiable d'un litige né entre les parties, seuls les tribunaux [du ressort de la Cour d'appel de / de la ville de] [Ville] sont compétents.
 Éventuellement
-
-ARTICLE 12 : Publication par l’Utilisateur
+</br></br>
+<p>ARTICLE 12 :<p> Publication par l’Utilisateur
 Le site permet aux membres de publier [des commentaires / des œuvres personnelles].
 Dans ses publications, le membre s’engage à respecter les règles de la Netiquette et les règles de droit en vigueur.
 Le site exerce une modération [a priori / a posteriori] sur les publications et se réserve le droit de refuser leur mise en ligne, sans avoir à s’en justifier auprès du membre.

@@ -6,12 +6,13 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <div id="map"></div>
 
+
 <script
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzIbC986mSIgdEtoVgoIBaPKQeViR_CrY&callback=initMap"
 	async defer>
 	
 </script>
-
+	<center></br></br>
 <form:form method="post" action="connexion" modelAttribute="user">
 	<script>
 		// Note: This example requires that you consent to location sharing when
@@ -45,6 +46,7 @@
 			}
 		}
 	</script>
+
 	<table>
 		<tr>
 			<td><form:label path="username">Username</form:label></td>
@@ -76,13 +78,13 @@
 	</table>
 
 </form:form>
-
+</center>
 <!--  -->
 
+</br></br></br></br></br>
 
 
-
-<h5>
-<a href="<c:url value='/subscribe' />">je ne possède pas de compte,
+<h4>
+<a href="<c:url value='/subscribe' />"  style="float: right">je ne possède pas de compte,
 	je souhaite m'inscrire</a>
-</h5>
+</h4>

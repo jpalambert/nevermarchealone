@@ -29,6 +29,9 @@ private UtilisateurDAO uDAO;
 public String deconnexion (HttpServletRequest req) {
 	HttpSession session = req.getSession();
 	if (session != null) {
+		Utilisateur userVerif = (Utilisateur) session.getAttribute("user");
+		userVerif.setEtat("etat");
+		uDAO.save(userVerif);
 	    session.invalidate();
 	    return "connexion";
 	}
