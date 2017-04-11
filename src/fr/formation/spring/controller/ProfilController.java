@@ -32,17 +32,6 @@ public class ProfilController {
 		Utilisateur usession= (Utilisateur) session.getAttribute("user");
 		req.setAttribute("usession", usession);
 
-		
-		ArrayList<String> listHob= new ArrayList<String>();
-		String delim=",";
-		StringTokenizer hob= new StringTokenizer(usession.getHobbie(),delim);
-	
-		while (hob.hasMoreTokens()){
-			listHob.add(hob.nextToken());
-			System.out.println(listHob);}
-		Set<String> listVerif = new HashSet<String>(listHob);
-		
-		System.out.println(usession.getNom());
 		return "modifProfil";
 	}
 	
@@ -54,19 +43,7 @@ public class ProfilController {
 		
 		req.setAttribute("usession", usession);
 		
-		//recuperer l attribut string sous forme de arraylist
-		ArrayList<String> listeHobbies= new ArrayList<String>();
-		String delim=",";
-		StringTokenizer hobbies= new StringTokenizer(utilisateur.getHobbie(),delim);
-		
-		System.out.println("Nombre de mots:" + hobbies.countTokens());
-		
-		while (hobbies.hasMoreTokens()){
-			listeHobbies.add(hobbies.nextToken());
-			System.out.println(listeHobbies);}
-	
-		req.setAttribute("listeHobbies", listeHobbies);
-		req.setAttribute("hobbies", hobbies);
+
 		
 		usession.setDescription(utilisateur.getDescription());
 		usession.setBavard(utilisateur.getBavard());
