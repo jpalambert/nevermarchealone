@@ -50,4 +50,4 @@
 
 
 
-<a href="profilDetaille">Modifier profil</a>
+<a href="modifProfil">Modifier profil</a>
