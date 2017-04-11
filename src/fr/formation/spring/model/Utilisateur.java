@@ -30,9 +30,6 @@ public class Utilisateur {
 
 	private String bavard;
 	private String description;
-	//private List<String> hobbie;
-	
-	
 	
 		/**
 	 * @return the bavard
