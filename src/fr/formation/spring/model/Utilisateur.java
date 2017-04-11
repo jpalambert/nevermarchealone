@@ -30,10 +30,18 @@ public class Utilisateur {
 
 	private String bavard;
 	private String description;
-	//private List<String> hobbie;
+private  int commandeEnCours=0;
 	
 	
 	
+		public int getCommandeEnCours() {
+	return commandeEnCours;
+}
+
+public void setCommandeEnCours(int commandeEnCours) {
+	this.commandeEnCours = commandeEnCours;
+}
+
 		/**
 	 * @return the bavard
 	 */

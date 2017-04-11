@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import fr.formation.spring.dao.UtilisateurDAO;
 import fr.formation.spring.model.FormUser;
+import fr.formation.spring.model.Utilisateur;
 
 
 @Controller
@@ -60,10 +61,15 @@ public class AccountController {
 	}
 	@RequestMapping(value = "/commande", method = RequestMethod.POST)
 	public String commande(HttpServletRequest req, HttpServletResponse resp, Model model) {
-		req.getParameter("command");
-		req.setAttribute("comcom", req.getParameter("command") );
-		System.out.println(req.getParameter("command"));
-		return "commande";
+		// recupere l'username de l'accompagnant
+        req.setAttribute("comcom", req.getParameter("command"));
+        
+        Utilisateur accompagnant = uDAO.findByUsername(req.getParameter("command"));
+        // set la commande en cours pour l'accompagnant
+        accompagnant.setCommandeEnCours(1);
+        //sauvegarde en base de données
+        uDAO.save(accompagnant);
+        return "commande";
 		
 	
 	}
