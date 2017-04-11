@@ -5,7 +5,7 @@
 
 <div id="coords">
 	<c:forEach items="${ listU}" var="user" varStatus="status">
-		<div id="${status.index }" >
+		<div id="${status.index }">
 			<p>${user.username }</p>
 			<p>${user.lat }</p>
 			<p>${user.lng }</p>
@@ -26,31 +26,29 @@
 				lat : -34.397,
 				lng : 150.644
 			},
-			zoom : 9
+			zoom : 15
 		});
 		var infoWindow = new google.maps.InfoWindow({
 			map : map
 		});
 		
+		
 		<c:forEach items="${listU}" var="user" varStatus="status">
-		var infoWindow${status.index} = new google.maps.InfoWindow({map : map});
+		
 		var position${status.index} = {
 				lat : ${user.lat},
 				lng : ${user.lng}
 			};
-
 	
-			infoWindow${status.index}.setContent('${user.username}');
-			
-			
-			
 			var marker${status.index} = new google.maps.Marker({
 		          position: position${status.index},
 		          map: map,
 		          title: 'kikou'
 		        });
 		        marker${status.index}.addListener('click', function() {
-		          infoWindow${status.index}.open(map, marker${status.index});
+		        	var infoWindow${status.index} = new google.maps.InfoWindow({map : map});
+					infoWindow${status.index}.setContent('${user.username}');
+					infoWindow${status.index}.open(map, marker${status.index});
 		        });
 	</c:forEach>
 		// Try HTML5 geolocation.
@@ -64,6 +62,7 @@
 				infoWindow.setPosition(pos);
 				infoWindow.setContent('Location found.');
 				map.setCenter(pos);
+				
 			}, function() {
 				handleLocationError(true, infoWindow, map.getCenter());
 			});
@@ -79,10 +78,25 @@
 				.setContent(browserHasGeolocation ? 'Error: The Geolocation service failed.'
 						: 'Error: Your browser doesn\'t support geolocation.');
 	}
+	
 	$("p").hide();
+	
+	
 </script>
+
 <script
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzIbC986mSIgdEtoVgoIBaPKQeViR_CrY&callback=initMap"
 	async defer>
 	
+</script>
+<script type="text/javascript">
+if ("${userSession.etat}"==="accompagnateur"){
+	
+
+  var timeout = setTimeout("location.reload(true);",5000);
+  function resetTimeout() {
+    clearTimeout(timeout);
+    timeout = setTimeout("location.reload(true);",5000);
+  }
+}
 </script>
