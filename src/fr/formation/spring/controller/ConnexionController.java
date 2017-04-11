@@ -27,6 +27,18 @@ public class ConnexionController {
 private UtilisateurDAO uDAO;
 
 
+
+@RequestMapping(value = "/deconnexion", method = RequestMethod.GET)
+public String deconnexion (HttpServletRequest req) {
+	HttpSession session = req.getSession();
+	if (session != null) {
+	    session.invalidate();
+	    return "connexion";
+	}
+	
+	return "connexion";
+}
+
 	@RequestMapping(value = "/connexion", method = RequestMethod.GET)
 	public String connexion(Model model) {
 				return "connexion";
