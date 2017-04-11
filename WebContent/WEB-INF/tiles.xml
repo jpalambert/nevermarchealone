@@ -22,6 +22,14 @@
 		<put-attribute name="body" value="/WEB-INF/views/jsp/toto.jsp" />
 	</definition>
 
+
+<!-- Configuration de la vue "faq" -->
+	<definition name="faq" extends="base.definition">
+		<put-attribute name="title" value="title.faq" />
+		<put-attribute name="body" value="/WEB-INF/views/jsp/faq.jsp" />
+	</definition>
+
+
 	<!-- Configuration de la vue "subscribe" -->
 	<definition name="subscribe" extends="base.definition">
 		<put-attribute name="title" value="title.subscribe" />
@@ -42,6 +50,12 @@
 	<definition name="map" extends="base.map">
 		<put-attribute name="title" value="title.map" />
 		<put-attribute name="body" value="/WEB-INF/views/jsp/map.jsp" />
+	</definition>
+	
+	<!-- Configuration de la vue "About" -->
+	<definition name="about" extends="base.definition">
+		<put-attribute name="title" value="title.about" />
+		<put-attribute name="body" value="/WEB-INF/views/jsp/about.jsp" />
 	</definition>
 	
 	

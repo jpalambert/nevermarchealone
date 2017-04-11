@@ -27,25 +27,40 @@
                 <img style="max-width:40px; margin-top: -7px;"
                      src="http://chantalserriere.blog.lemonde.fr/files/2008/03/marcheur.1205428588.png" >
             </a>
-  <div class="container-fluid">
+ <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">Never Marche Alone</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="connexion">Accueil</a></li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">recherche <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="rechercheacc">Recherche accompagnateur</a></li>
-          <li><a href="recherche">Recherche utilisateur</a></li>
-          
-         
-        </ul>
-      </li>
-      <li><a href="subscribe">subscribe</a></li>
-     
-    </ul>
-  </div>
-</nav>
+  	</div>
+			<ul class="nav navbar-nav" style="float: none">
+				<li class="active"><a href="connexion">Accueil</a></li>
+				<!--       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">recherche <span class="caret"></span></a> -->
+				<!--         <ul class="dropdown-menu"> -->
+				<c:if test="${user.etat == 'accompagne'}">
+					<li><a href="rechercheacc">Recherche accompagnateur</a></li>
+				</c:if>
+
+				<c:if test="${user.etat == 'accompagnateur'}">
+					<li><a href="recherche">Recherche utilisateur</a></li>
+				</c:if>
+
+				<!--         </ul> -->
+
+				<li><a href="about">About</a></li>
+				<li><a href="cgu">C.G.U.</a></li>
+				<li><a href="faq">F.A.Q.</a></li>
+				<li class="dropdown" style="float: right"><a
+					class="dropdown-toggle" data-toggle="dropdown" href="#">Bienvenue
+						<center>${user.username}<span class="caret"></span>
+						</center>
+				</a>
+					<ul class="dropdown-menu">
+						<li><a href="rechercheacc">Profil détaillé</a></li>
+						<li><a href="deconnexion">Déconnexion</a></li>
+					</ul></li>
+			</ul>
+		</div>
+	</nav>
+  
   <tiles:insertAttribute name="body" />
 	
 </body>

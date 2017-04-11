@@ -80,14 +80,9 @@
 <!--  -->
 
 
+
+
+<h5>
 <a href="<c:url value='/subscribe' />">je ne possède pas de compte,
 	je souhaite m'inscrire</a>
-<tr>
-
-	<footer>
-		<a href="<c:url value='/cgu' />">cgu</a>
-</tr>
-
-<a href="<c:url value='/map' />">map</a>
-</footer>
-
+</h5>
