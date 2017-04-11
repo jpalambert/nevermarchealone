@@ -1,5 +1,10 @@
 package fr.formation.spring.controller;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.StringTokenizer;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -20,29 +25,52 @@ public class ProfilController {
 	@Autowired
 	private UtilisateurDAO uDAO;
 	
+	@RequestMapping(value = "/modifProfil", method = RequestMethod.GET)
+	public String modifProfil(HttpServletRequest req) {
+		
+		HttpSession session = req.getSession();
+		Utilisateur usession= (Utilisateur) session.getAttribute("user");
+		req.setAttribute("usession", usession);
+
+		return "modifProfil";
+	}
+	
+	@RequestMapping(value = "/modifProfil", method = RequestMethod.POST)
+	public String modifProfil1(@ModelAttribute("user") Utilisateur utilisateur, BindingResult result,HttpServletRequest req, Model model) {
+		
+		HttpSession session = req.getSession();
+		Utilisateur usession= (Utilisateur) session.getAttribute("user");
+		
+		req.setAttribute("usession", usession);
+		
+
+		
+		usession.setDescription(utilisateur.getDescription());
+		usession.setBavard(utilisateur.getBavard());
+		usession.setHobbie(utilisateur.getHobbie());
+		
+		uDAO.save(usession);
+		return "profilDetaille";
+	}
 	@RequestMapping(value = "/profilDetaille", method = RequestMethod.GET)
 	public String profilDetaille(HttpServletRequest req) {
 		
 		HttpSession session = req.getSession();
 		Utilisateur usession= (Utilisateur) session.getAttribute("user");
-		System.out.println(usession.getNom());
+		req.setAttribute("usession", usession);
+
 		return "profilDetaille";
 	}
 	
 	@RequestMapping(value = "/profilDetaille", method = RequestMethod.POST)
-	public String profilDetaille1(@ModelAttribute("user") Utilisateur utilisateur, BindingResult result,HttpServletRequest req, Model model) {
-		//Utilisateur userVerif = uDAO.findByUsername(utilisateur.getUsername());
+	public String profilDetaille1(HttpServletRequest req) {
+		
 		HttpSession session = req.getSession();
 		Utilisateur usession= (Utilisateur) session.getAttribute("user");
-		
-		//System.out.println(utilisateur.getBavard());
-		usession.setDescription(utilisateur.getDescription());
-		usession.setBavard(utilisateur.getBavard());
-		
-		uDAO.save(usession);
+		req.setAttribute("usession", usession);
+
 		return "profilDetaille";
 	}
-	
 
 
 }

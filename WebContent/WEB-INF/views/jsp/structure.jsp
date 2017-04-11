@@ -50,7 +50,8 @@
 
 </head>
 
-<body>
+
+<body> 	
 
 	<nav class="navbar navbar-default">
 		<a class="navbar-brand" rel="home" href="#" title="never walk alone">
@@ -83,6 +84,7 @@
 				<li><a href="subscribe">Subscribe</a></li>
 				</c:if>
 				
+				<c:if test="${user.username != null }">
 				<li class="dropdown" style="float: right"><a
 					class="dropdown-toggle" data-toggle="dropdown" href="#">Bienvenue
 						<center>${user.username}<span class="caret"></span>
@@ -93,6 +95,7 @@
 						<li><a href="deconnexion">Déconnexion</a></li>
 					</ul></li>
 			</ul>
+				</c:if>
 		</div>
 	</nav>
 

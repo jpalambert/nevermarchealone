@@ -1,9 +1,11 @@
 package fr.formation.spring.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.util.List;
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
@@ -30,7 +32,11 @@ public class Utilisateur {
 
 	private String bavard;
 	private String description;
+<<<<<<< HEAD
 private  int commandeEnCours=0;
+=======
+	private String hobbie;
+>>>>>>> branch 'hugoboss' of https://github.com/jpalambert/nevermarchealone.git
 	
 	
 	
@@ -41,6 +47,20 @@ private  int commandeEnCours=0;
 public void setCommandeEnCours(int commandeEnCours) {
 	this.commandeEnCours = commandeEnCours;
 }
+
+		/**
+	 * @return the hobbie
+	 */
+	public String getHobbie() {
+		return hobbie;
+	}
+
+	/**
+	 * @param hobbie the hobbie to set
+	 */
+	public void setHobbie(String hobbie) {
+		this.hobbie = hobbie;
+	}
 
 		/**
 	 * @return the bavard
