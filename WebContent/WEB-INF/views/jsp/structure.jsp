@@ -80,7 +80,9 @@
 				</c:if>
 
 				<!--         </ul> -->
-				<li><a href="profilDetaille">profil Detaille</a></li>
+				<c:if test="${user.username != null }">
+				<li><a href="profilDetaille">Mon profil</a></li>
+				</c:if>
 				<li><a href="about">About</a></li>
 				<li><a href="cgu">C.G.U.</a></li>
 				<li><a href="faq">F.A.Q.</a></li>
