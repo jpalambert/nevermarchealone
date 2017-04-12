@@ -37,6 +37,7 @@ public class MapController {
 
 		System.out.println(cDAO.findCommandeEnCours(usession.getUsername()).getCommandeEnCours());
 		session.setAttribute("commandeEnvoi", cDAO.findCommandeEnCours(usession.getUsername()).getCommandeEnCours());
+		session.setAttribute("utilisateur", cDAO.findCommandeEnCours(usession.getUsername()));
 		return "accompagnant";
 	}
 	
