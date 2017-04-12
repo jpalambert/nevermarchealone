@@ -39,18 +39,6 @@ public class AccountController {
 		return "subscribe";
 	}
 
-
-	@RequestMapping(value = "/faq", method = RequestMethod.GET)
-	public String faq(Model model) {
-		return "faq";
-	}
-
-	@RequestMapping(value = "/about", method = RequestMethod.GET)
-	public String about(Model model) {
-		return "about";
-	}
-
-
 	@RequestMapping(value = "/rechercheacc", method = RequestMethod.GET)
 	public String rechercheacc(Model model) {
 		return "rechercheAccompagnateur";
