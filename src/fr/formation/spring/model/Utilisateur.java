@@ -33,9 +33,14 @@ public class Utilisateur {
 
 	private String bavard;
 	private String description;
+
 	private String hobbie;
 
-		
+
+	
+	
+
+
 		/**
 	 * @return the hobbie
 	 */

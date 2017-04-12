@@ -39,23 +39,11 @@ public class AccountController {
 		return "subscribe";
 	}
 
-	@RequestMapping(value = "/rechercheacc", method = RequestMethod.GET)
-	public String rechercheacc(Model model) {
-		return "rechercheAccompagnateur";
-
-	}
-
-	@RequestMapping(value = "/recherche", method = RequestMethod.GET)
-	public String recherche(Model model) {
-		return "rechercheUtilisateur";
-
-	
-	}
-
 
 
 	@RequestMapping(value = "/commande", method = RequestMethod.POST)
 	public String commande(HttpServletRequest req, HttpServletResponse resp, Model model) {
+
 		// recupere l'username de l'accompagnant et l'envoie dans la prochaine
 		// JSP
 		req.setAttribute("comcom", req.getParameter("command"));
@@ -66,7 +54,6 @@ public class AccountController {
 		Utilisateur usession = (Utilisateur) session.getAttribute("user");
 		Utilisateur accompagnant = uDAO.findByUsername(req.getParameter("command"));
 
-		
 		
 		// creation de la commande
 		Commande c = new Commande();
