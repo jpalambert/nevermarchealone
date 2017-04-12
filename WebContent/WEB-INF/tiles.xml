@@ -10,18 +10,18 @@
 		<put-attribute name="body" value="" />
 	</definition>
 	
-	<!-- Config de la base des carte -->
+	<!-- Config de la base des cartes -->
 	<definition name="base.map" template="/WEB-INF/views/jsp/baseMap.jsp">
 		<put-attribute name="title" value="" />
 		<put-attribute name="body" value="" />
 	</definition>
 
-	<!-- Configuration de la vue "home" -->
-	<definition name="accueil" extends="base.definition">
-		<put-attribute name="title" value="title.home" />
-		<put-attribute name="body" value="/WEB-INF/views/jsp/toto.jsp" />
-	</definition>
 
+<!-- Configuration de la vue "home" pour les utilisateurs deja connectés -->
+	<definition name="accueil" extends="base.definition">
+		<put-attribute name="title" value="title.connex" />
+		<put-attribute name="body" value="/WEB-INF/views/jsp/accueil.jsp" />
+	</definition>
 
 <!-- Configuration de la vue "faq" -->
 	<definition name="faq" extends="base.definition">

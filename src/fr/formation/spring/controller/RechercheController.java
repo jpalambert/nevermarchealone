@@ -13,6 +13,24 @@ import fr.formation.spring.model.Utilisateur;
 public class RechercheController {
 
 	
+	
+	
+	@RequestMapping(value = "/rechercheacc", method = RequestMethod.GET)
+	public String rechercheacc(Model model) {
+		return "rechercheAccompagnateur";
+		
+	
+	}
+	
+	
+	@RequestMapping(value = "/recherche", method = RequestMethod.GET)
+	public String rechercheGet(Model model) {
+		return "rechercheUtilisateur";
+		
+	
+	}
+	
+	
 	@RequestMapping(value = "/recherche", method = RequestMethod.POST)
 	public String recherche(Model model) {
 			return "rechercheUtilisateur";

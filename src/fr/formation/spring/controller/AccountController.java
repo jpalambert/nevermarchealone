@@ -36,21 +36,7 @@ public class AccountController {
 	}
 
 	
-	
-	@RequestMapping(value = "/rechercheacc", method = RequestMethod.GET)
-	public String rechercheacc(Model model) {
-		return "rechercheAccompagnateur";
-		
-	
-	}
-	
-	
-	@RequestMapping(value = "/recherche", method = RequestMethod.GET)
-	public String recherche(Model model) {
-		return "rechercheUtilisateur";
-		
-	
-	}
+
 	@RequestMapping(value = "/commande", method = RequestMethod.POST)
 	public String commande(HttpServletRequest req, HttpServletResponse resp, Model model) {
 		// recupere l'username de l'accompagnant

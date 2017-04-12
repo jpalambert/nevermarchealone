@@ -63,15 +63,20 @@
 				<a class="navbar-brand" href="#">Never Marche Alone</a>
 			</div>
 			<ul class="nav navbar-nav" style="float: none">
-				<li class="active"><a href="connexion">Accueil</a></li>
+			<c:if test="${user.username != null }">
+				<li class="active"><a href="connex">Accueil</a></li>
+				</c:if>
+				<c:if test="${user.username == null }">
+				<li class="active"><a href="connexion">Loggin</a></li>
+				</c:if>
 				<!--       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">recherche <span class="caret"></span></a> -->
 				<!--         <ul class="dropdown-menu"> -->
 				<c:if test="${user.etat == 'accompagne'}">
-					<li><a href="rechercheacc">Recherche accompagnateur</a></li>
+					<li><a href="recherche">Rechercher un <center>accompagnateur</center></a></li>
 				</c:if>
 
 				<c:if test="${user.etat == 'accompagnateur'}">
-					<li><a href="recherche">Recherche utilisateur</a></li>
+					<li><a href="rechercheacc">Rechercher un <center>utilisateur</center></a></li>
 				</c:if>
 
 				<!--         </ul> -->

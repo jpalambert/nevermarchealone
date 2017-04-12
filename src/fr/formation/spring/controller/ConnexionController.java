@@ -1,15 +1,11 @@
 package fr.formation.spring.controller;
 
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -43,7 +39,16 @@ public String deconnexion (HttpServletRequest req) {
 }
 
 	@RequestMapping(value = "/connexion", method = RequestMethod.GET)
-	public String connexion(Model model) {
+	public String connexion(HttpServletRequest req) {
+		HttpSession session = req.getSession();
+		
+		//if (session.getAttribute(null)==null){
+		//return "connexion";
+		//}	
+//		Utilisateur userVerif = uDAO.findByUsername(utilisateur.getUsername());
+//		
+//		HttpSession session = req.getSession();
+//		session.setAttribute("user", userVerif);
 				return "connexion";
 		
 		
@@ -56,6 +61,7 @@ public String deconnexion (HttpServletRequest req) {
 		if (userVerif.getPassword().equals(utilisateur.getPassword()))
 		{
 			
+	
 			userVerif.setEtat(utilisateur.getEtat());
 			userVerif.setLat(utilisateur.getLat());
 			userVerif.setLng(utilisateur.getLng());
@@ -78,7 +84,7 @@ public String deconnexion (HttpServletRequest req) {
 				return "rechercheUtilisateur";
 			}
 		} else{
-			System.out.println("t'es vraiment une merde");
+			System.out.println("Non connecté(e)");
 			return "connexion";
 		}
 	
