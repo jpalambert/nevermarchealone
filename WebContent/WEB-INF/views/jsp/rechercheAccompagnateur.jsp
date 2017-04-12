@@ -5,7 +5,7 @@
 
 
 
-<form:form method="post" action="map">
+<form:form method="post" action="accompagnant">
     <div class="form-group">
               <label for="sel1">Je suis disponible pour une durée de :</label>
     

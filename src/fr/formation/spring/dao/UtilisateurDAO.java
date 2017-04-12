@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import fr.formation.spring.model.Commande;
 import fr.formation.spring.model.Utilisateur;
 
 @Repository
@@ -46,4 +47,9 @@ public class UtilisateurDAO extends DAO<Utilisateur> {
     public List<Utilisateur> findAllByEtat() {
         return this.em.createQuery("SELECT u FROM Utilisateur u WHERE u.etat='accompagnateur'", Utilisateur.class).getResultList();
     }
+	
+	public Utilisateur findCommandeEnCours (String username){
+		 return this.em.createQuery("SELECT c FROM Commande c WHERE c.commandeEnCours=1 AND c.usernameAcc LIKE :cusUser", Utilisateur.class).getSingleResult();
+	}
+	
 }

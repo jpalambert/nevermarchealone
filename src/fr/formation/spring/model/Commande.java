@@ -31,6 +31,7 @@ public class Commande {
 	public void setCommandeEnCours(int commandeEnCours) {
 		this.commandeEnCours = commandeEnCours;
 	}
+	
 	public int getNumCommande() {
 		return numCommande;
 	}

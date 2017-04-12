@@ -19,22 +19,12 @@ public class RechercheController {
 
 	}
 
-	/*@RequestMapping(value = "/recherche", method = RequestMethod.POST)
-	public String recheche(Model model) {
-		return "maps"; // va chercher la vue "maps" et donc la google map.
 
-	}*/
 	
 		@RequestMapping(value = "/rechercheAcc", method = RequestMethod.POST)
 		public String rechercheAccompagnateur(Model model) {
 			return "rechercheAccompagnateur";
 		}
 	
-	/*@RequestMapping(value = "/recherche", method = RequestMethod.POST)
-	public String recherche(Model model) {
 
-		if (user.getEtat().equals("accompagne")){
-			return "rechercheUtilisateur";}
-		else return "rechercheAccompagnateur";
-	}*/
 }

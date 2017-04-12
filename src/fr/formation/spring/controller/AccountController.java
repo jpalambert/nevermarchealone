@@ -97,8 +97,26 @@ public class AccountController {
 			}
 			return "subscribe";
 		}
-
+		
+		System.out.println(formUser.getNom());
+		formUser.setBavard("");
+		formUser.setDescription("");
+		formUser.setLat(0);
+		formUser.setLng(0);
+		formUser.setHobbie("");
+		formUser.setEtat("etat");
+		
+		
 		uDAO.save(formUser);
+		
+		
+		Commande cinit = new Commande();
+		cinit.setUsernameAcc(formUser.getUsername());
+		cinit.setUsernameUser(formUser.getUsername());
+		cinit.setCommandeEnCours(0);
+		System.out.println(cinit.getCommandeEnCours());
+		cDAO.save(cinit);
+		
 
 		return "connexion";
 	}

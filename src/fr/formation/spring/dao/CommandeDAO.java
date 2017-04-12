@@ -2,6 +2,8 @@ package fr.formation.spring.dao;
 
 import java.util.List;
 
+import javax.persistence.NoResultException;
+
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -44,7 +46,21 @@ public class CommandeDAO extends DAO<Commande> {
 	}
 	@Override
     public List<Commande> findAllByEtat() {
-        return this.em.createQuery("SELECT c FROM Commande c WHERE u.etat='accompagnateur'", Commande.class).getResultList();
+        return this.em.createQuery("SELECT c FROM Commande c WHERE c.etat='accompagnateur'", Commande.class).getResultList();
     }
+	
+	@Override
+	public Commande findCommandeEnCours (String username){
+		Commande cvide = new Commande();
+		try {this.em.createQuery("SELECT c FROM Commande c WHERE c.commandeEnCours=1 AND c.usernameAcc=:custUser", Commande.class)
+				.setParameter("custUser", username).getSingleResult();}
+		
+		catch (Exception e){
+			return cvide;
+			
+		}
+		
+			return this.em.createQuery("SELECT c FROM Commande c WHERE c.commandeEnCours=1 AND c.usernameAcc=:custUser", Commande.class).setParameter("custUser", username).getSingleResult();
+	}
 	
 }

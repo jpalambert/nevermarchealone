@@ -86,4 +86,8 @@
 		<put-attribute name="title" value="title.commande" />
 		<put-attribute name="body" value="/WEB-INF/views/jsp/commande.jsp" />
 	</definition>
+				<!-- Configuration de la vue "commande" -->
+	<definition name="accompagnant" extends="base.map">
+		<put-attribute name="body" value="/WEB-INF/views/jsp/accompagnant.jsp" />
+	</definition>
 </tiles-definitions>

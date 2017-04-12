@@ -20,5 +20,5 @@ public abstract class DAO<T>
 	public abstract boolean delete(T object);
 	public abstract T findByUsername(String username);
 	public abstract List<T> findAllByEtat() ;
-			
+	public abstract T findCommandeEnCours(String username);
 }
