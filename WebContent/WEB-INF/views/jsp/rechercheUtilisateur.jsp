@@ -88,9 +88,10 @@
         </tr>
     </table>
     
-    <input type="submit" value="Valider">
+       <button class="btn btn-primary" type="submit" value="valider"><span class="glyphicon glyphicon-ok-sign" style="color:#4f4;"></span> valider</button>
+
 </form:form>
 
 
 
-<a href="profilDetaille">Modifier profil</a>
+<a href="modifProfil">Modifier profil</a>

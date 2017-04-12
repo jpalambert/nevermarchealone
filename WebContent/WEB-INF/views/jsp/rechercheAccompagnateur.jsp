@@ -6,9 +6,11 @@
 
 
 <form:form method="post" action="map">
+    <div class="form-group">
+              <label for="sel1">Je suis disponible pour une durée de :</label>
     
-    <p>Je suis disponible pour une durée de ... :</p>
-            <select name="temps">
+  
+            <select class="form-control" id="sel1" name="temps">
             	<option selected>0 - 30min</option>
                 <option selected>30min - 1h00</option>
                 <option selected>1h00 - 1h30</option>
@@ -16,38 +18,46 @@
                 <option selected>2h00 - 2h30</option>
                 <option selected>2h30 - 3h00</option>
              </select>
-
+</div>
     <table>
         <tr>
             <td><p>Je cherche....</p></td>
         </tr>
         <tr>
               <td>
-                <select name="choixsexe">
+              <div class="form-group">
+              <label for="sel1">choisissez votre sexe:</label>
+                <select class="form-control" id="sel1" name="choixsexe">
                    <option selected>Un homme</option>
                    <option selected>Une femme</option>
                       <option selected>Indifférent</option>
-                  </select>            
+                  </select>     
+                  </div>       
             </td>
+  
+
         </tr>
     </table>
     
      <table>
         <tr>
-            <td><p>sur une zone de ... : </p></td>
+            
         </tr>
         <tr>
             <td>
-                <INPUT TYPE="text" placeholder="perimètre (en mètres)" name="zone">
+            <div class="form-group">
+  <label for="usr">perimetre de recherche</label>
+                <INPUT TYPE="text" class="form-control" id="usr" placeholder="perimètre (en mètres)" name="zone">
         
                 
             </td>
         </tr>
     </table>
     
-    <input type="submit" value="Valider">
+       <button class="btn btn-primary" type="submit" value="valider"><span class="glyphicon glyphicon-ok-sign" style="color:#4f4;"></span> valider</button>
+    
 </form:form>
 
 
 
-<a href="profilDetaille">Modifier profil</a>
+<a href="modifProfil">Modifier profil</a>

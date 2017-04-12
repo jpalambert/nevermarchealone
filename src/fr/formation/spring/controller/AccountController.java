@@ -20,6 +20,7 @@ import fr.formation.spring.model.Commande;
 import fr.formation.spring.model.FormUser;
 import fr.formation.spring.model.Utilisateur;
 
+
 @Controller
 
 public class AccountController {
@@ -38,6 +39,7 @@ public class AccountController {
 		return "subscribe";
 	}
 
+
 	@RequestMapping(value = "/faq", method = RequestMethod.GET)
 	public String faq(Model model) {
 		return "faq";
@@ -47,6 +49,7 @@ public class AccountController {
 	public String about(Model model) {
 		return "about";
 	}
+
 
 	@RequestMapping(value = "/rechercheacc", method = RequestMethod.GET)
 	public String rechercheacc(Model model) {
@@ -58,7 +61,10 @@ public class AccountController {
 	public String recherche(Model model) {
 		return "rechercheUtilisateur";
 
+	
 	}
+
+
 
 	@RequestMapping(value = "/commande", method = RequestMethod.POST)
 	public String commande(HttpServletRequest req, HttpServletResponse resp, Model model) {
@@ -105,7 +111,7 @@ public class AccountController {
 		}
 
 		uDAO.save(formUser);
-		// System.out.println(formUser.toString());
+
 		return "connexion";
 	}
 

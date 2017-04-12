@@ -1,6 +1,9 @@
 package fr.formation.spring.controller;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -29,6 +32,9 @@ private UtilisateurDAO uDAO;
 public String deconnexion (HttpServletRequest req) {
 	HttpSession session = req.getSession();
 	if (session != null) {
+		Utilisateur userVerif = (Utilisateur) session.getAttribute("user");
+		userVerif.setEtat("etat");
+		uDAO.save(userVerif);
 	    session.invalidate();
 	    return "connexion";
 	}
@@ -38,7 +44,9 @@ public String deconnexion (HttpServletRequest req) {
 
 	@RequestMapping(value = "/connexion", method = RequestMethod.GET)
 	public String connexion(Model model) {
-		return "connexion";
+				return "connexion";
+		
+		
 	}
 
 	@RequestMapping(value = "/connexion", method = RequestMethod.POST)
