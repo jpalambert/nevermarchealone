@@ -12,13 +12,13 @@
 	<p>Dites-en nous plus sur vous :</p>
 
 	<c:if test="${empty usession.description}">
-		<input type="text" placeholder="decrivez-vous...!" name="description" />
+		<input class="form-control" type="text" placeholder="decrivez-vous...!" name="description" />
 	</c:if>
 	<c:if test="${not empty usession.description}">
-		<input type="text" value="${usession.description}" name="description" />
+		<input class="form-control" type="text" value="${usession.description}" name="description" />
 	</c:if>
-
-	<p>Vous etes plutot quelqu'un qui parle :</p>
+<br>
+	<u><p>Vous etes plutot quelqu'un qui parle :</p></u>
 	<table>
 		<tr>
 			<c:if test="${empty usession.bavard}">
@@ -49,7 +49,8 @@
 		</tr>
 
 	</table>
-	<p>J'aime parler de :</p>
+	<br>
+	<u><p>J'aime parler de :</p></u>
 
 
 
@@ -173,7 +174,14 @@
 		</tr>
 <%-- 		</c:if> --%>
 		<tr>
-			<td><input type="submit" value="Modifier" /></td>
+			<td>
+				<div class="btn pull-right">
+					<button class="btn btn-primary" type="submit">
+						<span class="glyphicon glyphicon-ok-sign" style="color: #4f4;"></span>
+						modifier
+					</button>
+				</div>
+			</td>
 		</tr>
 	</table>
 </form>

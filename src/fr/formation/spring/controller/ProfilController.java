@@ -6,6 +6,7 @@ import java.util.Set;
 import java.util.StringTokenizer;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -65,12 +66,17 @@ public class ProfilController {
 	@RequestMapping(value = "/profilDetaille", method = RequestMethod.POST)
 	public String profilDetaille1(HttpServletRequest req) {
 		
-		HttpSession session = req.getSession();
-		Utilisateur usession= (Utilisateur) session.getAttribute("user");
-		req.setAttribute("usession", usession);
+		req.setAttribute("profiler", req.getParameter("profil"));
+		req.setAttribute("profilerprenom", req.getParameter("profilprenom"));
+		req.setAttribute("profilernom", req.getParameter("profilnom"));
+		req.setAttribute("profilerbavard", req.getParameter("profilbavard"));
+		req.setAttribute("profilerdescription", req.getParameter("profildescription"));
+		req.setAttribute("profilerhobbie", req.getParameter("profilhobbie"));
+		req.setAttribute("cdupost", 1);
+		
 
 		return "profilDetaille";
 	}
-
-
+	
+	
 }

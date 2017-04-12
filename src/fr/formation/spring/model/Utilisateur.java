@@ -13,6 +13,7 @@ public class Utilisateur {
 
 	@Id
 	@Column(name = "PER_USR")
+	@NotEmpty(message = "L'\''username est obligatoire")
 	private String username;
 
 	@NotEmpty(message = "Le nom est obligatoire")
