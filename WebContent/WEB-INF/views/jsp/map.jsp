@@ -1,13 +1,13 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <div id="map"></div>
 <div id="coords">
-<c:forEach items="${ listU}" var="user" varStatus="status">
-        <div id="${status.index }">
-            <p>${user.username }</p>
-            <p>${user.lat }</p>
-            <p>${user.lng }</p>
-        </div>
-    </c:forEach>
+	<c:forEach items="${ listU}" var="user" varStatus="status">
+		<div id="${status.index }">
+			<p>${user.username }</p>
+			<p>${user.lat }</p>
+			<p>${user.lng }</p>
+		</div>
+	</c:forEach>
 </div>
 <script>
 
@@ -54,7 +54,7 @@
                     infoWindow${status.index}.setContent('<b>'+'${user.username}'+'<br/>sexe : '+
                             '\n${user.sexe}'+'</b>'+
                             '<form action="/tp-spring-mvc-1/commande" method="post"><input type="hidden" value="${user.username}" name="command"}/><button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-ok-sign" style="color:#4f4;"></span> valider commande</button></form>'+
-                            '<form action="/tp-spring-mvc-1/rechercheacc" method="post"><button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-user" style="color:#4f4;"></span> profil détaillé</button></form>')
+                            '<form action="/tp-spring-mvc-1/profilDetaille" method="post"><input type="hidden" value="${user.description}" name="profildescription"/><input type="hidden" value="${user.hobbie}" name="profilhobbie"/><input type="hidden" value="${user.bavard}" name="profilbavard"/><input type="hidden" value="${user.username}" name="profil"/><input type="hidden" value="${user.prenom}" name="profilprenom"/><input type="hidden" value="${user.nom}" name="profilnom"/><button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-user" style="color:#4f4;"></span> profil détaillé</button></form>')
                              infoWindow${status.index}.open(map, marker${status.index});
                 
                  
@@ -113,7 +113,8 @@ if ("${userSession.etat}"==="accompagnateur"){
 }
 </script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzIbC986mSIgdEtoVgoIBaPKQeViR_CrY&callback=initMap"
-    async defer>
+<script
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzIbC986mSIgdEtoVgoIBaPKQeViR_CrY&callback=initMap"
+	async defer>
     
 </script>

@@ -20,13 +20,11 @@
              </select>
 </div>
     <table>
-        <tr>
-            <td><p>Je cherche....</p></td>
-        </tr>
+       
         <tr>
               <td>
               <div class="form-group">
-              <label for="sel1">choisissez votre sexe:</label>
+              <label for="sel1">je cherche:</label>
                 <select class="form-control" id="sel1" name="choixsexe">
                    <option selected>Un homme</option>
                    <option selected>Une femme</option>

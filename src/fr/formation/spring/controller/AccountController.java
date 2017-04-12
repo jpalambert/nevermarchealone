@@ -66,6 +66,8 @@ public class AccountController {
 		Utilisateur usession = (Utilisateur) session.getAttribute("user");
 		Utilisateur accompagnant = uDAO.findByUsername(req.getParameter("command"));
 
+		
+		
 		// creation de la commande
 		Commande c = new Commande();
 		// attribution des paramètres de la commande
