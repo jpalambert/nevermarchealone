@@ -58,8 +58,7 @@ public class AccountController {
         
         Utilisateur accompagnant = uDAO.findByUsername(req.getParameter("command"));
         // set la commande en cours pour l'accompagnant
-        accompagnant.setCommandeEnCours(1);
-        //sauvegarde en base de données
+       //sauvegarde en base de données
         uDAO.save(accompagnant);
         return "commande";
 		

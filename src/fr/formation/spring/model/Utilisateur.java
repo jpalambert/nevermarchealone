@@ -32,21 +32,11 @@ public class Utilisateur {
 
 	private String bavard;
 	private String description;
-<<<<<<< HEAD
-private  int commandeEnCours=0;
-=======
-	private String hobbie;
->>>>>>> branch 'hugoboss' of https://github.com/jpalambert/nevermarchealone.git
-	
-	
-	
-		public int getCommandeEnCours() {
-	return commandeEnCours;
-}
 
-public void setCommandeEnCours(int commandeEnCours) {
-	this.commandeEnCours = commandeEnCours;
-}
+	private String hobbie;
+	
+	
+	
 
 		/**
 	 * @return the hobbie
