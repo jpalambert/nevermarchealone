@@ -90,4 +90,7 @@
 	<definition name="accompagnant" extends="base.map">
 		<put-attribute name="body" value="/WEB-INF/views/jsp/accompagnant.jsp" />
 	</definition>
+		<definition name="accompagnantValidation" extends="base.map">
+		<put-attribute name="body" value="/WEB-INF/views/jsp/accompagnantValidation.jsp" />
+	</definition>
 </tiles-definitions>

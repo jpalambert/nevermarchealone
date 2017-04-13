@@ -29,31 +29,49 @@ public class CommandeController {
 		// JSP
 		req.setAttribute("comcom", req.getParameter("command"));
 		// recupere l'username de l'accompagne via la session et creation de
-		// notre couple accompagné/accompagnant pour sauvegarde dans la base de
-		// donnée
+		// notre couple accompagnï¿½/accompagnant pour sauvegarde dans la base de
+		// donnï¿½e
 		HttpSession session = req.getSession();
 		Utilisateur usession = (Utilisateur) session.getAttribute("user");
 		Utilisateur accompagnant = uDAO.findByUsername(req.getParameter("command"));
 
+		// on teste en premier si l'accompagnant est vraiment disponible
+		if (accompagnant.getEtat()=="etat"){
+			String nonDispo = "Pas de chance, quelquun est passe avant vous!";
+			req.setAttribute("nonDispo", nonDispo);
+			req.setAttribute("nonDispoVal", 1);
+			System.out.println(req.getAttribute("nonDispo"));
+			return "recherche";
+		} 
+		else {
+			// creation de la commande
+			Commande c = new Commande();
+			// attribution des paramï¿½tres de la commande
+			c.setUsernameUser(usession.getUsername());
+			c.setLatUser(usession.getLat());
+			c.setLngUser(usession.getLng());
+			
+			c.setUsernameAcc(accompagnant.getUsername());
+			c.setLatAcc(accompagnant.getLat());
+			c.setLngAcc(accompagnant.getLng());
+			
+			// attribution de la valeur 1 pour la commande en cours (permets ï¿½ l'acdcompagnant d'avoir la notification)
+			c.setCommandeEnCours(1);
+			
+			// sauvegarde de la commande
+			cDAO.save(c);
+			
+			// aprï¿½s avoir commandï¿½ le marcheur, permets de ne plus le faire apparaitre pour les autres.
+			accompagnant.setEtat("etat");
+			uDAO.save(accompagnant);
+			return "commande";
+			
+		}
 		
-		// creation de la commande
-		Commande c = new Commande();
-		// attribution des paramètres de la commande
-		c.setUsernameUser(usession.getUsername());
-		c.setLatUser(usession.getLat());
-		c.setLngUser(usession.getLng());
 		
-		c.setUsernameAcc(accompagnant.getUsername());
-		c.setLatAcc(accompagnant.getLat());
-		c.setLngAcc(accompagnant.getLng());
 		
-		// attribution de la valeur 1 pour la commande en cours (permets à l'acdcompagnant d'avoir la notification)
-		c.setCommandeEnCours(1);
-		
-		// sauvegarde de la commande
-		cDAO.save(c);
 
-		return "commande";
+	
 
 	}
 }

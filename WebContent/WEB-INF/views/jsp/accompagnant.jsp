@@ -2,9 +2,13 @@
 
 <c:choose>
 	<c:when test="${commandeEnvoi==1}">
-<div id="map"></div>
-		<h1>${utilisateur.usernameAcc}vientde vous reserver!</h1>
-
+		<div id="map"></div>
+		<h1>${utilisateur.usernameAcc}vient de vous reserver!</h1>
+		<form method="get" action="accompagnant">
+			<input type="submit" value="Valider"/>
+			<input type="hidden" name="validationCmd" value="Valider"/>
+		</form>
+		
 		<script type="text/javascript">
 		   
     // Note: This example requires that you consent to location sharing when
@@ -17,7 +21,7 @@
             center : {
                 lat : ${utilisateur.latAcc},
                 lng : ${utilisateur.lngAcc}
-            },
+            }, 
             zoom : 9
         });
         

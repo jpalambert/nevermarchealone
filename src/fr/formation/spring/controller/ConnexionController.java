@@ -1,6 +1,8 @@
 package fr.formation.spring.controller;
 
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -13,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import fr.formation.spring.dao.CommandeDAO;
 import fr.formation.spring.dao.UtilisateurDAO;
-import fr.formation.spring.model.Commande;
 import fr.formation.spring.model.FormUser;
 import fr.formation.spring.model.Utilisateur;
 
@@ -90,7 +91,7 @@ public String deconnexion (HttpServletRequest req) {
 				return "rechercheUtilisateur";
 			}
 		} else{
-			System.out.println("Non connecté(e)");
+			System.out.println("Non connectï¿½(e)");
 			return "connexion";
 		}
 	

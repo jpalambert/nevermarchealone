@@ -6,6 +6,7 @@
 
 
 <form:form method="post" action="accompagnant">
+<input type="hidden" name="validationCmd" value="0"/>
     <div class="form-group">
               <label for="sel1">Je suis disponible pour une durée de :</label>
     

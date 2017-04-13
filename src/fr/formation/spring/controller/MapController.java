@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import fr.formation.spring.dao.CommandeDAO;
 import fr.formation.spring.dao.UtilisateurDAO;
+import fr.formation.spring.model.Commande;
 import fr.formation.spring.model.Utilisateur;
 
 @Controller
@@ -36,10 +37,14 @@ public class MapController {
 		Utilisateur usession = (Utilisateur) session.getAttribute("user");
 
 		System.out.println(cDAO.findCommandeEnCours(usession.getUsername()).getCommandeEnCours());
+
 		session.setAttribute("commandeEnvoi", cDAO.findCommandeEnCours(usession.getUsername()).getCommandeEnCours());
 		session.setAttribute("utilisateur", cDAO.findCommandeEnCours(usession.getUsername()));
-		return "accompagnant";
-	}
+		
+	
+			return "accompagnant";
+		}
+
 	
 	@RequestMapping(value = "/accompagnant", method = RequestMethod.GET)
 	public String accomp2(HttpServletRequest req) {
@@ -48,7 +53,19 @@ public class MapController {
 
 		System.out.println(cDAO.findCommandeEnCours(usession.getUsername()).getCommandeEnCours());
 		session.setAttribute("commandeEnvoi", cDAO.findCommandeEnCours(usession.getUsername()).getCommandeEnCours());
-		return "accompagnant";
+		session.setAttribute("utilisateur", cDAO.findCommandeEnCours(usession.getUsername()));
+		
+		System.out.println(req.getParameter("validationCmd"));
+		
+		if (req.getParameter("validationCmd").equals("Valider")){
+			Commande c = (Commande) cDAO.findCommandeEnCours(usession.getUsername());
+			c.setCommandeEnCours(0);
+			cDAO.save(c);
+			return "accompagnantValidation";
+		}	else {
+			return "accompagnant";
+		}
+		
 	}
 
 	@RequestMapping(value = "/map", method = RequestMethod.GET)

@@ -14,7 +14,7 @@ public class UtilisateurDAO extends DAO<Utilisateur> {
 
 	@Override
 	public List<Utilisateur> findAll() {
-		return this.em.createQuery("SELECT u FROM Utilisateur u", Utilisateur.class).getResultList();
+		return this.em.createQuery("FROM Utilisateur u", Utilisateur.class).getResultList();
 	}
 
 	@Override

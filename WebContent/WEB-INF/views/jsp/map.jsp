@@ -61,12 +61,10 @@
                 
                 });
     </c:forEach>
-        // Try HTML5 geolocation.
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(function(position) {
+            
                 var pos = {
-                    lat : position.coords.latitude,
-                    lng : position.coords.longitude
+                    lat : ${userSession.lat},
+                    lng : ${userSession.lng}
                 };
                 //infoWindow.setPosition(pos);
 //              infoWindow.setContent('Location found.');
@@ -81,14 +79,7 @@
                       icon: image,
                       title: 'kikou'
                     });
-            }, function() {
-                handleLocationError(true, infoWindow, map.getCenter());
-            });
-        } else {
-            // Browser doesn't support Geolocation
-            handleLocationError(false, infoWindow, map.getCenter());
-        }
-    }
+            
     
     function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         //infoWindow.setPosition(pos);
@@ -97,21 +88,11 @@
                         : 'Error: Your browser doesn\'t support geolocation.');
     }
     $("p").hide();
-
+    }
+    
 </script>
 
 
-<script type="text/javascript">
-if ("${userSession.etat}"==="accompagnateur"){
-	
-
-  var timeout = setTimeout("location.reload(true);",5000);
-  function resetTimeout() {
-    clearTimeout(timeout);
-    timeout = setTimeout("location.reload(true);",5000);
-  }
-}
-</script>
 
 <script
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzIbC986mSIgdEtoVgoIBaPKQeViR_CrY&callback=initMap"
