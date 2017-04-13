@@ -16,7 +16,7 @@
 	<%-- <td><form:radiobutton path="etat" value="accompagnateur" />Accompagner</td>
       <td><form:radiobutton path="etat" value="accompagne" />Etre accompagne</td> --%>
 	<div class="form-group">
-		<label for="sel1">Je suis disponible pour une durée de :</label> <select
+		<label for="sel1">Je veux me balader pour une durée de :</label> <select
 			class="form-control" id="sel1" name="temps">
 			<option selected>0 - 30min</option>
 			<option selected>30min - 1h00</option>

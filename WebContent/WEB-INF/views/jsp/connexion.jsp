@@ -57,21 +57,21 @@
 				<td><form:input class="form-control" placeholder="username"
 						path="username" value="${user.username}" />
 						</td>
-				<td><form:errors path="username" /></td>
+				<td><form:errors class="text-warning" path="username" /></td>
 			</tr>
 			<tr>
 			
 				<td><form:label path="password">Password</form:label></td>
 				<td><form:password class="form-control" placeholder="password"
 						path="password" value="${user.password}" /></td>
-				<td><form:errors path="password" /></td>
+				<td><form:errors class="text-warning" path="password" /></td>
 			</tr>
 			<tr>
 				<td><form:radiobutton path="etat" value="accompagnateur" /> je
-					suis un accompagnateur</td>
+					souhaite accompagner </td>
 
-				<td><form:radiobutton path="etat" value="accompagne" /> je
-					suis un accompagné</td>
+				<td><form:radiobutton path="etat" value="accompagne" checked="checked"/> je
+					souhaite être accompagné</td>
 			</tr>
 			<tr>
 				<td><form:label path="lng">Longitude</form:label></td>

@@ -19,7 +19,7 @@ public class UtilisateurValidator implements Validator {
 	public void validate(Object target, Errors errors) {
 		FormUser formUser = (FormUser) target;
 		if (!formUser.getConfirmPassword().equals(formUser.getPassword())) {
-			errors.reject("confirmPassword", "Passwords didn't match!");
+			errors.reject("confirmPassword", "Mots de passe differents!");
 		}
 	}
 
