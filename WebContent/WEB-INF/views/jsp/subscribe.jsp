@@ -30,12 +30,13 @@
 			<td><form:label path="confirmPassword">Confirm password</form:label></td>
 			<td><form:password  class="form-control" placeholder="confirmez votre mot de passe" path="confirmPassword"
 					value="${user.confirmPassword}" /></td>
-			<td><form:errors path="confirmPassword" /></td>
+			<td><form:errors class="text-warning" path="confirmPassword" /></td>
 		</tr>
 		<tr>
 			<td><form:radiobutton path="sexe" value="M" /> homme</td>
 
 			<td><form:radiobutton path="sexe" value="F" /> Femme</td>
+			<td><form:errors class="text-warning" path="sexe" /></td>
 			
 		</tr>
 		<tr>

@@ -13,7 +13,7 @@ public class Utilisateur {
 
 	@Id
 	@Column(name = "PER_USR")
-	@NotEmpty(message = "L'\''username est obligatoire")
+	@NotEmpty(message = "L'username est obligatoire")
 	private String username;
 
 	@NotEmpty(message = "Le nom est obligatoire")
@@ -22,9 +22,9 @@ public class Utilisateur {
 	@NotEmpty(message = "Le prenom est obligatoire")
 	private String prenom;
 
-	@NotEmpty(message = "Password est obligatoire")
+	@NotEmpty(message = "Le mot de passe est obligatoire")
 	private String password;
-	@NotEmpty(message = "sexe est obligatoire")
+	@NotEmpty(message = "Le champ sexe est obligatoire")
 	private String sexe;
 
 	private String etat;
@@ -35,10 +35,6 @@ public class Utilisateur {
 	private String description;
 
 	private String hobbie;
-
-
-	
-	
 
 
 		/**

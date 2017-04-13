@@ -77,7 +77,7 @@
 				</c:if>
 
 				<c:if test="${user.etat == 'accompagnateur'}">
-					<li><a href="rechercheacc">Rechercher un <center>utilisateur</center></a></li>
+					<li><a href="rechercheacc">Proposer ma <center>compagnie</center></a></li>
 				</c:if>
 
 		
