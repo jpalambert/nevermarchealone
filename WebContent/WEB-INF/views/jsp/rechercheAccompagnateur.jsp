@@ -57,6 +57,3 @@
     
 </form:form>
 
-
-
-<a href="modifProfil">Modifier profil</a>
