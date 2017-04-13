@@ -24,10 +24,27 @@ public class MapController {
 	public String map(HttpServletRequest req) {
 		HttpSession session = req.getSession();
 		Utilisateur usession = (Utilisateur) session.getAttribute("user");
+		Utilisateur uRechercher=new Utilisateur();
 		req.setAttribute("userSession", usession);
-		req.setAttribute("listU", uDAO.findAllByEtat());
+		
+		uRechercher.setNom("");
+		uRechercher.setPrenom("");
+		uRechercher.setUsername("");
+		uRechercher.setPassword("");
+		uRechercher.setSexe(req.getParameter("choixsexe"));
+		uRechercher.setBavard(req.getParameter("parle"));
+		
+		System.out.println(req.getParameter("parle"));
+		session.setAttribute("uRechercher", uRechercher);
+		
+		if(uRechercher.getSexe().equals("indifferent")){
+			req.setAttribute("listU", uDAO.findAllByEtat(uRechercher));
+		}else{
+		
+			req.setAttribute("listU", uDAO.findAllByRecherche(uRechercher));
+		
+		}
 		return "map";
-
 	}
 
 	@RequestMapping(value = "/accompagnant", method = RequestMethod.POST)
@@ -54,7 +71,7 @@ public class MapController {
 	public String map2(HttpServletRequest req) {
 		HttpSession session = req.getSession();
 		Utilisateur usession = (Utilisateur) session.getAttribute("user");
-
+		
 		req.setAttribute("userSession", usession);
 
 		if (usession.getEtat().equals("accompagne")) {

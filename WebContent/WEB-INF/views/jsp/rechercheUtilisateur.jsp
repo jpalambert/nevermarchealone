@@ -31,9 +31,9 @@
 					<div class="form-group">
 						<label for="sel1">je cherche:</label> <select class="form-control"
 							id="sel1" name="choixsexe">
-							<option selected>Un homme</option>
-							<option selected>Une femme</option>
-							<option selected>Indifférent</option>
+							<option selected value="M">Un homme</option>
+							<option selected value="F">Une femme</option>
+							<option selected value="indifferent">Indifférent</option>
 						</select>
 					</div>
 				</td>
@@ -44,9 +44,9 @@
 					<div class="form-group">
 						<label for="sel1">qui parle:</label> <select class="form-control"
 							id="sel1" name="parle">
-							<option selected>Un peu</option>
-							<option selected>Beaucoup</option>
-							<option selected>Passionnément</option>
+							<option selected value="un peu">Un peu</option>
+							<option selected value="beaucoup">Beaucoup</option>
+							<option selected value="passionnement">Passionnément</option>
 						</select>
 				</td>
 

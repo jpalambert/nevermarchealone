@@ -36,11 +36,11 @@
 				<!--       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">recherche <span class="caret"></span></a> -->
 				<!--         <ul class="dropdown-menu"> -->
 				<c:if test="${user.etat == 'accompagne'}">
-					<li><a href="rechercheacc">Recherche accompagnateur</a></li>
+					<li><a href="rechercheacc">Proposer sa compagnie</a></li>
 				</c:if>
 
 				<c:if test="${user.etat == 'accompagnateur'}">
-					<li><a href="recherche">Recherche utilisateur</a></li>
+					<li><a href="recherche">Rechercher un accompagnateur</a></li>
 				</c:if>
 
 				<!--         </ul> -->
