@@ -32,3 +32,7 @@
 		<p class="text-info">${usession.hobbie}</p>
 	</c:otherwise>
 </c:choose>
+
+
+
+<a href="modifProfil">Modifier profil</a>

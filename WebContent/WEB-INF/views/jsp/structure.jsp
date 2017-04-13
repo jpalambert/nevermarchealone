@@ -44,6 +44,7 @@
 	rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"
 	media="screen,projection" />
+	<link type="text/css" rel="stylesheet" href="<c:url value="/css/essai.css"/>" media="screen,projection" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <script type="text/javascript"
 	src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -67,7 +68,7 @@
 				<li class="active"><a href="connex">Accueil</a></li>
 				</c:if>
 				<c:if test="${user.username == null }">
-				<li class="active"><a href="connexion">Loggin</a></li>
+				<li class="active"><a href="connexion">Login</a></li>
 				</c:if>
 				<!--       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">recherche <span class="caret"></span></a> -->
 				<!--         <ul class="dropdown-menu"> -->
@@ -79,10 +80,7 @@
 					<li><a href="rechercheacc">Rechercher un <center>utilisateur</center></a></li>
 				</c:if>
 
-				<!--         </ul> -->
-				<c:if test="${user.username != null }">
-				<li><a href="profilDetaille">Mon profil</a></li>
-				</c:if>
+		
 				<li><a href="about">About</a></li>
 				<li><a href="cgu">C.G.U.</a></li>
 				<li><a href="faq">F.A.Q.</a></li>
@@ -97,8 +95,9 @@
 						<center>${user.username}<span class="caret"></span>
 						</center>
 				</a>
-					<ul class="dropdown-menu">
-						<li><a href="rechercheacc">Profil détaillé</a></li>
+					<ul class="dropdown-menu">					
+						<li><a href="modifProfil">Modifier profil</a></li>
+						<li><a href="profilDetaille">Profil détaillé</a></li>
 						<li><a href="deconnexion">Déconnexion</a></li>
 					</ul></li>
 			</ul>
