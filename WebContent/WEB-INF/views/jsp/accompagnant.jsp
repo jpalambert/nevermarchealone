@@ -3,7 +3,7 @@
 <c:choose>
 	<c:when test="${commandeEnvoi==1}">
 		<div id="map"></div>
-		<h1>${utilisateur.usernameAcc}vient de vous reserver!</h1>
+		<h1>${utilisateur.usernameUser}vient de vous reserver!</h1>
 		<form method="get" action="accompagnant">
 			<input type="submit" value="Valider"/>
 			<input type="hidden" name="validationCmd" value="Valider"/>
