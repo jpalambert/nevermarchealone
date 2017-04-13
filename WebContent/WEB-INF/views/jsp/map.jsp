@@ -1,5 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<div id="map"></div>
+<div id="map" ></div>
 <div id="coords">
 	<c:forEach items="${ listU}" var="user" varStatus="status">
 		<div id="${status.index }">
@@ -22,7 +22,7 @@
                 lat : -34.397,
                 lng : 150.644
             },
-            zoom : 9
+            zoom : 15
         });
         
         

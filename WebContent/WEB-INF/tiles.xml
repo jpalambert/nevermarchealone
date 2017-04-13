@@ -10,6 +10,13 @@
 		<put-attribute name="body" value="" />
 	</definition>
 	
+	<!-- Configuration du layout secondaire -->
+	<definition name="base.bis" template="/WEB-INF/views/jsp/baseExtendProfilValidator.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="navigation" value="/WEB-INF/views/jsp/navigation.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
 	<!-- Config de la base des cartes -->
 	<definition name="base.map" template="/WEB-INF/views/jsp/baseMap.jsp">
 		<put-attribute name="title" value="" />
@@ -81,6 +88,13 @@
 		<put-attribute name="title" value="title.profilDetaille" />
 		<put-attribute name="body" value="/WEB-INF/views/jsp/profilDetaille.jsp" />
 	</definition>
+	
+				<!-- Configuration de la vue "profilDetaille" après modification du profil -->
+	<definition name="profilDetailleValider" extends="base.bis">
+		<put-attribute name="title" value="title.profilDetaille" />
+		<put-attribute name="body" value="/WEB-INF/views/jsp/profilDetailleValider.jsp" />
+	</definition>
+	
 				<!-- Configuration de la vue "commande" -->
 	<definition name="commande" extends="base.definition">
 		<put-attribute name="title" value="title.commande" />

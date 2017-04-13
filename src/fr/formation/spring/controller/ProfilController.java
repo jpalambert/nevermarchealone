@@ -23,36 +23,7 @@ import fr.formation.spring.model.Utilisateur;
 @Controller
 public class ProfilController {
 
-	@Autowired
-	private UtilisateurDAO uDAO;
 	
-	@RequestMapping(value = "/modifProfil", method = RequestMethod.GET)
-	public String modifProfil(HttpServletRequest req) {
-		
-		HttpSession session = req.getSession();
-		Utilisateur usession= (Utilisateur) session.getAttribute("user");
-		req.setAttribute("usession", usession);
-
-		return "modifProfil";
-	}
-	
-	@RequestMapping(value = "/modifProfil", method = RequestMethod.POST)
-	public String modifProfil1(@ModelAttribute("user") Utilisateur utilisateur, BindingResult result,HttpServletRequest req, Model model) {
-		
-		HttpSession session = req.getSession();
-		Utilisateur usession= (Utilisateur) session.getAttribute("user");
-		
-		req.setAttribute("usession", usession);
-		
-
-		
-		usession.setDescription(utilisateur.getDescription());
-		usession.setBavard(utilisateur.getBavard());
-		usession.setHobbie(utilisateur.getHobbie());
-		
-		uDAO.save(usession);
-		return "profilDetaille";
-	}
 	@RequestMapping(value = "/profilDetaille", method = RequestMethod.GET)
 	public String profilDetaille(HttpServletRequest req) {
 		

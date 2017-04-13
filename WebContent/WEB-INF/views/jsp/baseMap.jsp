@@ -11,8 +11,8 @@
 
   <head>
     <style type="text/css">
-      html, body { height: 100%; margin: 0; padding: 0; }
-      #map { height: 100%; }
+      html, body { height: 100%; margin: 25px; padding: 0; }
+      #map { height: 70%; border: 5px solid midnightblue}
     </style>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
       <meta charset="utf-8">
