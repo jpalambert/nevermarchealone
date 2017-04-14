@@ -66,7 +66,6 @@
 
 
 <body >
-
 <script>
    $(document).ready(function () {
        $('.dropdown-toggle').dropdown();
@@ -103,17 +102,16 @@
 				<c:if test="${user.username == null }">
 					<li ><a href="connexion">Login</a></li>
 				</c:if>
-<!-- 				      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">recherche <span class="caret"></span></a> -->
-<!-- 				        <ul class="dropdown-menu"> -->
-<%-- 				<c:if test="${user.etat == 'accompagne'}"> --%>
-<!-- 					<li><a href="recherche">Rechercher un accompagnateur <span -->
-<!-- 							class="glyphicon glyphicon-search" aria-hidden="true"></span></a></li> -->
-<%-- 				</c:if> --%>
+				    
+				<c:if test="${user.etat == 'accompagne'}">
+					<li><a href="recherche">Recherche <span
+							class="glyphicon glyphicon-search" aria-hidden="true"></span></a></li>
+				</c:if>
 
-<%-- 				<c:if test="${user.etat == 'accompagnateur'}"> --%>
-<!-- 					<li><a href="rechercheacc">Proposer ma compagnie <span -->
-<!-- 							class="glyphicon glyphicon-search" aria-hidden="true"></span></a></li> -->
-<%-- 				</c:if> --%>
+				<c:if test="${user.etat == 'accompagnateur'}">
+					<li><a href="rechercheacc">Recherche <span
+							class="glyphicon glyphicon-search" aria-hidden="true"></span></a></li>
+				</c:if>
 
 
 				<li><a href="about">About <span
