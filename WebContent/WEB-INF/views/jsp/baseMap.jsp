@@ -27,7 +27,7 @@
 
 
 <html lang="en">
-<head background="http://www.active.com/Assets/Walking/460/diet-detective-walk-for-your-health.jpg">
+<head >
 <!--  <style type="text/css"> -->
 
 

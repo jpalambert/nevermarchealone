@@ -95,7 +95,7 @@ System.out.println(utilisateur.getUsername());
 
 
 		} catch (Exception e) {
-			System.out.println("Non connectÃ©(e), Username erronÃ©");
+			System.out.println("Non connecté(e), Username erroné");
 			return "connexion";
 		}
 	}

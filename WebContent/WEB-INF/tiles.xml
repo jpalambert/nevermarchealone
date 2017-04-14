@@ -102,8 +102,8 @@
 		<put-attribute name="body" value="/WEB-INF/views/jsp/accompagnantValidation.jsp" />
 	</definition>
 	
-					<!-- Configuration de la vue "profilDetaille" après modification du profil -->
-	<definition name="historique" extends="base.bis">
+					<!-- Configuration de la vue "historique" après modification du profil -->
+	<definition name="historique" extends="base.definition">
 		<put-attribute name="body" value="/WEB-INF/views/jsp/historique.jsp" />
 	</definition>
 </tiles-definitions>
