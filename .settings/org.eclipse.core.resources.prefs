@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+encoding//WebContent/WEB-INF/views/jsp/accueil.jsp=UTF-8
 encoding//WebContent/WEB-INF/views/jsp/modifProfil.jsp=UTF-8
 encoding//WebContent/WEB-INF/views/jsp/subscribe.jsp=UTF-8
 encoding//resources/messages_fr.properties=UTF-8

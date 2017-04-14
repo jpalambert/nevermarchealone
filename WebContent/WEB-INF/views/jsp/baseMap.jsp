@@ -7,19 +7,35 @@
 	<tiles:insertAttribute name="title" />
 </c:set>
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 
   <head>
     <style type="text/css">
       html, body { height: 100%; margin: 25px; padding: 0; }
       #map { height: 70%; border: 5px solid midnightblue}
     </style>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-      <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     
+  
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="css/bootstrap.min.css">
+
+
+ <script
+	src="js/bootstrap.min.js"></script>
+	
+	<!-- Materialize -->
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="../css/materialize.min.css"
+	media="screen,projection" />
+<link type="text/css" rel="stylesheet"
+	href="<c:url value="/css/essai.css"/>" media="screen,projection" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   </head>
   
   
@@ -35,7 +51,7 @@
 			</div>
 			<ul class="nav navbar-nav" style="float: none">
 			<c:if test="${user.username != null }">
-				<li class="active"><a href="connex">Accueil</a></li>
+				<li ><a href="connex">Accueil<span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
 				</c:if>
 				<c:if test="${user.username == null }">
 				<li class="active"><a href="connexion">Login</a></li>
@@ -43,17 +59,17 @@
 				<!--       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">recherche <span class="caret"></span></a> -->
 				<!--         <ul class="dropdown-menu"> -->
 				<c:if test="${user.etat == 'accompagne'}">
-					<li><a href="recherche">Rechercher un <center>accompagnateur</center></a></li>
+					<li><a href="recherche">Rechercher un accompagnateur <span class="glyphicon glyphicon-search" aria-hidden="true"></span></a></li>
 				</c:if>
 
 				<c:if test="${user.etat == 'accompagnateur'}">
-					<li><a href="rechercheacc">Rechercher un <center>utilisateur</center></a></li>
+					<li><a href="rechercheacc">Rechercher un utilisateur <span class="glyphicon glyphicon-search" aria-hidden="true"></span></a></li>
 				</c:if>
 
 		
-				<li><a href="about">About</a></li>
-				<li><a href="cgu">C.G.U.</a></li>
-				<li><a href="faq">F.A.Q.</a></li>
+				<li><a href="about">About <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a></li>
+				<li><a href="cgu">C.G.U. <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a></li>
+				<li><a href="faq">F.A.Q. <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a></li>
 				
 				<c:if test="${user.username == null }">
 				<li><a href="subscribe">Subscribe</a></li>
@@ -62,20 +78,21 @@
 				<c:if test="${user.username != null }">
 				<li class="dropdown" style="float: right"><a
 					class="dropdown-toggle" data-toggle="dropdown" href="#">Bienvenue
-						<center>${user.username}<span class="caret"></span>
-						</center>
+						${user.username} <span class="glyphicon glyphicon-user" aria-hidden="true"></span><span class="caret"></span>
+						
 				</a>
 					<ul class="dropdown-menu">					
 						<li><a href="modifProfil">Modifier profil</a></li>
 						<li><a href="profilDetaille">Profil détaillé</a></li>
-						<li><a href="deconnexion">Déconnexion</a></li>
+						<li><a href="deconnexion">Déconnexion <span class="glyphicon glyphicon-off" aria-hidden="true"></span></a></li>
 					</ul></li>
+					</c:if>
 			</ul>
-				</c:if>
+				
 		</div>
 	</nav>
   
   <tiles:insertAttribute name="body" />
-	
+	 <script src="js/bootstrap.js"></script>
 </body>
 </html>

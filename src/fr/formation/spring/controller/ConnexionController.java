@@ -63,7 +63,7 @@ public class ConnexionController {
 	public String connexion(@ModelAttribute("user") Utilisateur utilisateur, BindingResult result,
 			HttpServletRequest req) {
 
-		try {
+//		try {
 			Utilisateur userVerif = uDAO.findByUsername(utilisateur.getUsername());
 
 			if (userVerif.getPassword().equals(utilisateur.getPassword())) {
@@ -89,16 +89,16 @@ public class ConnexionController {
 				}
 
 			} else {
-				System.out.println("Non connecté(e), mot de passe erroné");
+				System.out.println("Non connect�(e), mot de passe erron�");
 				return "connexion";
 			}
 
-		} catch (Exception e) {
-			System.out.println("Non connecté(e), Username erroné");
-			return "connexion";
+//		} catch (Exception e) {
+//			System.out.println("Non connecté(e), Username erroné");
+//			return "connexion";
 		}
 
-	}
+
 
 	@ModelAttribute("user")
 	public FormUser initUtilisateur() {

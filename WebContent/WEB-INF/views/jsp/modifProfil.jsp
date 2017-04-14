@@ -2,49 +2,50 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
-
+<center>
 <form method="post" action="modifProfilValider" model="user">
 
 
 
 	<h1>Modifier vos informations ${user.prenom} ${user.nom}</h1>
 
-
+<br>
 
 	<p>Dites-en nous plus sur vous :</p>
 
 	<c:if test="${empty usession.description}">
-		<input class="form-control" type="text" placeholder="decrivez-vous...!" name="description" />
+		<input type="text" placeholder="decrivez-vous...!" name="description" />
 	</c:if>
 	<c:if test="${not empty usession.description}">
-		<input class="form-control" type="text" value="${usession.description}" name="description" />
+		<input type="text" value="${usession.description}" name="description" />
 	</c:if>
+<br>
 <br>
 	<u><p>Vous etes plutot quelqu'un qui parle :</p></u>
 	<table>
 		<tr>
 			<c:if test="${empty usession.bavard}">
-				<td><input type="radio" name="bavard" value="un peu" /> Un peu</td>
-				<td><input type="radio" name="bavard" value="beaucoup" />Beaucoup</td>
-				<td><input type="radio" name="bavard" value="passionnement" />Passionnement</td>
+				<td><input type="radio" name="bavard" value="un peu" /> Un peu </td>
+				<td><input type="radio" name="bavard" value="beaucoup"  style="margin-left: 25px;"/>Beaucoup </td>
+				<td><input type="radio" name="bavard" value="passionnement" style="margin-left: 25px;" />Passionnement </td>
 			</c:if>
 			<c:if test="${usession.bavard=='un peu'}">
 				<td><input type="radio" name="bavard" value="un peu" checked />
 					Un peu</td>
-				<td><input type="radio" name="bavard" value="beaucoup" />Beaucoup</td>
-				<td><input type="radio" name="bavard" value="passionnement" />Passionnement</td>
+				<td><input type="radio" name="bavard" value="beaucoup" style="margin-left: 25px;" />Beaucoup</td>
+				<td><input type="radio" name="bavard" value="passionnement" style="margin-left: 25px;"/>Passionnement</td>
 			</c:if>
 			<c:if test="${usession.bavard=='beaucoup'}">
 				<td><input type="radio" name="bavard" value="un peu" /> Un
 					peu</td>
-				<td><input type="radio" name="bavard" value="beaucoup" checked />Beaucoup</td>
-				<td><input type="radio" name="bavard" value="passionnement" />Passionnement</td>
+				<td><input type="radio" name="bavard" value="beaucoup" checked style="margin-left: 25px;"/>Beaucoup</td>
+				<td><input type="radio" name="bavard" value="passionnement" style="margin-left: 25px;"/>Passionnement</td>
 			</c:if>
 			<c:if test="${usession.bavard=='passionnement'}">
 				<td><input type="radio" name="bavard" value="un peu" /> Un
 					peu</td>
-				<td><input type="radio" name="bavard" value="beaucoup" />Beaucoup</td>
-				<td><input type="radio" name="bavard" value="passionnement"
+				<td><input type="radio" name="bavard" value="beaucoup" style="margin-left: 25px;" />Beaucoup</td>
+				<td><input type="radio" name="bavard" value="passionnement" style="margin-left: 25px;"
 					checked />Passionnement</td>
 			</c:if>
 
@@ -52,56 +53,32 @@
 
 	</table>
 	<br>
-	<u><p>J'aime parler de :</p></u>
-
-
-
-	<table>
-<%-- 	<c:if test="${empty usession.hobbie}"> --%>
-<!-- 	<tr> -->
-<!-- 				<td><input type="checkbox" name="hobbie" value="sport" />Sport</td>	 -->
-<!-- 				<td><input type="checkbox" name="hobbie" value="musique" />Musique</td> -->
-<!-- 				<td><input type="checkbox" name="hobbie" value="politique" />Politique</td> -->
-<!-- 		</tr> -->
-<!-- 		<tr> -->
-<!-- 				<td><input type="checkbox" name="hobbie" value="jeux video" />Jeux video</td> -->
-<!-- 				<td><input type="checkbox" name="hobbie" value="lecture" />Lecture</td> -->
-<!-- 				<td><input type="checkbox" name="hobbie" value="cinema" />Cinema</td> -->
-<!-- 		</tr> -->
-<!-- 		<tr> -->
-<!-- 				<td><input type="checkbox" name="hobbie" value="danse" />Danse</td> -->
-<!-- 				<td><input type="checkbox" name="hobbie" value="histoire" />Histoire</td> -->
-<!-- 				<td><input type="checkbox" name="hobbie" value="voyages" />Voyages</td> -->
-<!-- 		</tr> -->
-<!-- 		<tr> -->
-<!-- 				<td><input type="checkbox" name="hobbie" value="actualites" />Actualites</td> -->
-<!-- 				<td><input type="checkbox" name="hobbie" value="sciences" />Sciences</td> -->
-<!-- 				<td><input type="checkbox" name="hobbie" value="autres" />Autres</td> -->
-			
-<!-- 		</tr> -->
-<%-- 	</c:if> --%>
 	
-<%-- 	<c:if test="${not empty usession.hobbie}"> --%>
+
+
+	
+<u><p>J'aime parler de:</p></u>
+<table >
 		<tr>
 			<c:if test="${fn:contains(usession.hobbie, 'sport')}">
-				<td><input type="checkbox" name="hobbie" value="sport" checked />Sport</td>
+				<td><input type="checkbox" name="hobbie" value="sport" checked/>Sport</td>
 			</c:if>
 			<c:if test="${!fn:contains(usession.hobbie, 'sport')}">
 				<td><input type="checkbox" name="hobbie" value="sport" />Sport</td>
 			</c:if>
 			<c:if test="${fn:contains(usession.hobbie, 'musique')}">
-				<td><input type="checkbox" name="hobbie" value="musique"
-					checked />Musique</td>
+				<td><input type="checkbox" name="hobbie" value="musique"  style="margin-left: 25px;"
+					checked/>Musique</td>
 			</c:if>
 			<c:if test="${!fn:contains(usession.hobbie, 'musique')}">
-				<td><input type="checkbox" name="hobbie" value="musique" />Musique</td>
+				<td><input type="checkbox" name="hobbie" value="musique" style="margin-left: 25px;"/>Musique</td>
 			</c:if>
 			<c:if test="${fn:contains(usession.hobbie, 'politique')}">
-				<td><input type="checkbox" name="hobbie" value="politique"
+				<td><input type="checkbox" name="hobbie" value="politique" style="margin-left: 25px;"
 					checked />Politique</td>
 			</c:if>
 			<c:if test="${!fn:contains(usession.hobbie, 'politique')}">
-				<td><input type="checkbox" name="hobbie" value="politique" />Politique</td>
+				<td><input type="checkbox" name="hobbie" value="politique" style="margin-left: 25px;"/>Politique</td>
 			</c:if>
 		</tr>
 		<tr>
@@ -114,18 +91,18 @@
 					video</td>
 			</c:if>
 			<c:if test="${fn:contains(usession.hobbie, 'lecture')}">
-				<td><input type="checkbox" name="hobbie" value="lecture"
+				<td><input type="checkbox" name="hobbie" value="lecture" style="margin-left: 25px;"
 					checked />Lecture</td>
 			</c:if>
 			<c:if test="${!fn:contains(usession.hobbie, 'lecture')}">
-				<td><input type="checkbox" name="hobbie" value="lecture" />Lecture</td>
+				<td><input type="checkbox" name="hobbie" value="lecture" style="margin-left: 25px;" />Lecture</td>
 			</c:if>
 			<c:if test="${fn:contains(usession.hobbie, 'cinema')}">
-				<td><input type="checkbox" name="hobbie" value="cinema"
+				<td><input type="checkbox" name="hobbie" value="cinema" style="margin-left: 25px;"
 					checked />Cinema</td>
 			</c:if>
 			<c:if test="${!fn:contains(usession.hobbie, 'cinema')}">
-				<td><input type="checkbox" name="hobbie" value="cinema" />Cinema</td>
+				<td><input type="checkbox" name="hobbie" value="cinema" style="margin-left: 25px;"/>Cinema</td>
 			</c:if>
 		</tr>
 		<tr>
@@ -137,18 +114,18 @@
 				<td><input type="checkbox" name="hobbie" value="danse" />Danse</td>
 			</c:if>
 			<c:if test="${fn:contains(usession.hobbie, 'histoire')}">
-				<td><input type="checkbox" name="hobbie" value="histoire"
+				<td><input type="checkbox" name="hobbie" value="histoire" style="margin-left: 25px;"
 					checked />Histoire</td>
 			</c:if>
 			<c:if test="${!fn:contains(usession.hobbie, 'histoire')}">
-				<td><input type="checkbox" name="hobbie" value="histoire" />Histoire</td>
+				<td><input type="checkbox" name="hobbie" value="histoire" style="margin-left: 25px;"/>Histoire</td>
 			</c:if>
 			<c:if test="${fn:contains(usession.hobbie, 'voyages')}">
-				<td><input type="checkbox" name="hobbie" value="voyages"
+				<td><input type="checkbox" name="hobbie" value="voyages" style="margin-left: 25px;"
 					checked />Voyages</td>
 			</c:if>
 			<c:if test="${!fn:contains(usession.hobbie, 'voyages')}">
-				<td><input type="checkbox" name="hobbie" value="voyages" />Voyages</td>
+				<td><input type="checkbox" name="hobbie" value="voyages" style="margin-left: 25px;"/>Voyages</td>
 			</c:if>
 		</tr>
 		<tr>
@@ -160,30 +137,28 @@
 				<td><input type="checkbox" name="hobbie" value="actualites" />Actualites</td>
 			</c:if>
 			<c:if test="${fn:contains(usession.hobbie, 'sciences')}">
-				<td><input type="checkbox" name="hobbie" value="sciences"
+				<td><input type="checkbox" name="hobbie" value="sciences" style="margin-left: 25px;"
 					checked />Sciences</td>
 			</c:if>
 			<c:if test="${!fn:contains(usession.hobbie, 'sciences')}">
-				<td><input type="checkbox" name="hobbie" value="sciences" />Sciences</td>
+				<td><input type="checkbox" name="hobbie" value="sciences" style="margin-left: 25px;"/>Sciences</td>
 			</c:if>
 			<c:if test="${fn:contains(usession.hobbie, 'autres')}">
-				<td><input type="checkbox" name="hobbie" value="autres"
+				<td><input type="checkbox" name="hobbie" value="autres" style="margin-left: 25px;"
 					checked />Autres</td>
 			</c:if>
 			<c:if test="${!fn:contains(usession.hobbie, 'autres')}">
-				<td><input type="checkbox" name="hobbie" value="autres" />Autres</td>
+				<td><input type="checkbox" name="hobbie" value="autres" style="margin-left: 25px;"/>Autres</td>
 			</c:if>
 		</tr>
+		</table>
 <%-- 		</c:if> --%>
-		<tr>
-			<td>
-				<div class="btn pull-right">
-					<button class="btn btn-primary" type="submit">
+		
+				<div class="btn pull-right"  style="padding: 25px; margin-right: 700px;">
+					<button class="btn btn-primary" type="submit" >
 						<span class="glyphicon glyphicon-ok-sign" style="color: #4f4;"></span>
 						modifier
 					</button>
 				</div>
-			</td>
-		</tr>
-	</table>
-</form>
+	
+</form></center>

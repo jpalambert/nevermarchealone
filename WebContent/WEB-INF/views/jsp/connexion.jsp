@@ -49,61 +49,128 @@
 				}
 			}
 		</script>
-
-		<table>
-		
-			<tr>
-				<td><form:label path="username">Username</form:label></td>
-				<td><form:input class="form-control" placeholder="username"
-						path="username" value="${user.username}" />
-						</td>
-				<td><form:errors class="text-warning" path="username" /></td>
-			</tr>
-			<tr>
-			
-				<td><form:label path="password">Password</form:label></td>
-				<td><form:password class="form-control" placeholder="password"
-						path="password" value="${user.password}" /></td>
-				<td><form:errors class="text-warning" path="password" /></td>
-			</tr>
-			<tr>
-				<td><form:radiobutton path="etat" value="accompagnateur" /> je
-					souhaite accompagner </td>
-
-				<td><form:radiobutton path="etat" value="accompagne" checked="checked"/> je
-					souhaite être accompagné</td>
-			</tr>
-			<tr>
-				<td><form:label path="lng">Longitude</form:label></td>
-				<td><form:input class="form-control" placeholder="longitude"
-						path="lng" value="" /></td>
-			</tr>
-			<tr>
-				<td><form:label path="lat">Latitude</form:label></td>
-				<td><form:input class="form-control" placeholder="latitude"
-						path="lat" value="" /></td>
-
-
-			</tr>
-			<td>
-				<div class="btn pull-right">
-					<button class="btn btn-primary" type="submit">
-						<span class="glyphicon glyphicon-ok-sign" style="color: #4f4;"></span>
-						Envoyer
-					</button>
+		<!-- Contact Section -->
+		<section id="contact">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<h2>Connexion</h2>
+						
+					</div>
 				</div>
-			</td>
-		</table>
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2">
+						<!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+						<!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+						<form name="sentMessage" id="contactForm" novalidate>
+							<div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+						<td><form:label path="username">Username</form:label></td>
+						<td><form:input class="form-control" placeholder="username"
+							path="username" value="${user.username}" /> 
+								</td>
+						<td><form:errors class="text-warning" path="username" /></td>
+				</div></div>
+					
+<div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+						<td><form:label path="password">Password</form:label></td>
+						<td><form:password class="form-control" placeholder="password"
+						path="password" value="${user.password}" /></td>
+					<td><form:errors class="text-warning" path="password" /></td>
+					</tr>
+</div>
+								</div>
+								<div class="row">
+									<div
+										class="form-group col-xs-12 floating-label-form-group controls">
+										<td><form:radiobutton path="etat" value="accompagnateur" />
+											je souhaite accompagner</td>
+
+										<td><form:radiobutton path="etat" value="accompagne"
+												checked="checked" /> je souhaite être accompagné</td>
+									</div>
+								</div>
+										<div class="row">
+									<div
+										class="form-group col-xs-12 floating-label-form-group controls">
+										<tr>
+											<td><form:label path="lng">Longitude</form:label></td>
+											<td><form:input class="form-control"
+													placeholder="longitude" path="lng" value="" /></td>
+										</tr>
+										<tr>
+											<td><form:label path="lat">Latitude</form:label></td>
+											<td><form:input class="form-control"
+													placeholder="latitude" path="lat" value="" /></td>
+									</div>
+								</div>
+								
+
+								<br>
+								<div id="success"></div>
+								<div class="row">
+									<div class="form-group col-xs-12">
+										<button type="submit" class="btn btn-success btn-lg">envoyer</button>
+									</div>
+								</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+		<!-- 		<table> -->
+
+		<!-- 			<tr> -->
+		<%-- 				<td><form:label path="username">Username</form:label></td> --%>
+		<%-- 				<td><form:input class="form-control" placeholder="username" --%>
+		<%-- 						path="username" value="${user.username}" /> --%>
+		<!-- 						</td> -->
+		<%-- 				<td><form:errors class="text-warning" path="username" /></td> --%>
+		<!-- 			</tr> -->
+		<!-- 			<tr> -->
+
+		<%-- 				<td><form:label path="password">Password</form:label></td> --%>
+		<%-- 				<td><form:password class="form-control" placeholder="password" --%>
+		<%-- 						path="password" value="${user.password}" /></td> --%>
+		<%-- 				<td><form:errors class="text-warning" path="password" /></td> --%>
+		<!-- 			</tr> -->
+		<!-- 			<tr> -->
+		<%-- 				<td><form:radiobutton path="etat" value="accompagnateur" /> je --%>
+		<!-- 					souhaite accompagner </td> -->
+
+		<%-- 				<td><form:radiobutton path="etat" value="accompagne" checked="checked"/> je --%>
+		<!-- 					souhaite être accompagné</td> -->
+		<!-- 			</tr> -->
+		<!-- 			<tr> -->
+		<%-- 				<td><form:label path="lng">Longitude</form:label></td> --%>
+		<%-- 				<td><form:input class="form-control" placeholder="longitude" --%>
+		<%-- 						path="lng" value="" /></td>  --%>
+		<!-- 			</tr> -->
+		<!-- 			<tr> -->
+		<%-- 				<td><form:label path="lat">Latitude</form:label></td> --%>
+		<%-- 				<td><form:input class="form-control" placeholder="latitude" --%>
+		<%-- 			path="lat" value="" /></td>  --%>
+
+
+		<!-- 			</tr> -->
+		<!-- 			<td> -->
+		<!-- 				<div class="btn pull-right"> -->
+		<!-- 					<button class="btn btn-primary" type="submit"> -->
+		<!-- 						<span class="glyphicon glyphicon-ok-sign" style="color: #4f4;"></span> -->
+		<!-- 						Envoyer -->
+		<!-- 					</button> -->
+		<!-- 				</div> -->
+		<!-- 			</td> -->
+		<!-- 		</table> -->
 
 	</form:form>
 </center>
 <!--  -->
 
-</br>
-</br>
-</br>
-</br>
-</br>
 
 
 <h4>
