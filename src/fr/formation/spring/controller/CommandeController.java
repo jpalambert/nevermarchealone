@@ -35,13 +35,14 @@ public class CommandeController {
 		Utilisateur usession = (Utilisateur) session.getAttribute("user");
 		Utilisateur accompagnant = uDAO.findByUsername(req.getParameter("command"));
 
+		System.out.println(accompagnant.getEtat());
 		// on teste en premier si l'accompagnant est vraiment disponible
-		if (accompagnant.getEtat()=="etat"){
+		if (accompagnant.getEtat().equals("etat")){
 			String nonDispo = "Pas de chance, quelquun est passe avant vous!";
 			req.setAttribute("nonDispo", nonDispo);
 			req.setAttribute("nonDispoVal", 1);
 			System.out.println(req.getAttribute("nonDispo"));
-			return "recherche";
+			return "commande";
 		} 
 		else {
 			// creation de la commande

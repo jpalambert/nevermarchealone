@@ -1,9 +1,6 @@
 package fr.formation.spring.controller;
 
-
-
 import java.util.List;
-
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -63,27 +60,30 @@ public class ConnexionController {
 	public String connexion(@ModelAttribute("user") Utilisateur utilisateur, BindingResult result,
 			HttpServletRequest req) {
 
-//		try {
+
+	try {
+
 			Utilisateur userVerif = uDAO.findByUsername(utilisateur.getUsername());
 
 			if (userVerif.getPassword().equals(utilisateur.getPassword())) {
-
+System.out.println(utilisateur.getUsername());
 				userVerif.setEtat(utilisateur.getEtat());
 				userVerif.setLat(utilisateur.getLat());
 				userVerif.setLng(utilisateur.getLng());
 				uDAO.save(userVerif);
-
-				System.out.println(userVerif.getEtat());
+				
+				HttpSession session = req.getSession();
+				session.setAttribute("user", userVerif);
+				
+				session.setAttribute("historiqueUser", cDAO.findHistorique(userVerif));
 
 				// redirection selon recherche souhaitee
 				if (utilisateur.getEtat().equals("accompagnateur")) {
-					HttpSession session = req.getSession();
-					session.setAttribute("user", userVerif);
+					
 					System.out.println("Bravo, tu es connecte!");
 					return "rechercheAccompagnateur";
 				} else {
-					HttpSession session = req.getSession();
-					session.setAttribute("user", userVerif);
+				
 					System.out.println("Bravo, tu es connecte!");
 					return "rechercheUtilisateur";
 				}
@@ -93,12 +93,12 @@ public class ConnexionController {
 				return "connexion";
 			}
 
-//		} catch (Exception e) {
-//			System.out.println("Non connecté(e), Username erroné");
-//			return "connexion";
+
+		} catch (Exception e) {
+			System.out.println("Non connecté(e), Username erroné");
+			return "connexion";
 		}
-
-
+	}
 
 	@ModelAttribute("user")
 	public FormUser initUtilisateur() {

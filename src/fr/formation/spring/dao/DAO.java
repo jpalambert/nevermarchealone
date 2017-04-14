@@ -20,5 +20,8 @@ public abstract class DAO<T>
 	public abstract boolean delete(T object);
 	public abstract T findByUsername(String username);
 	public abstract List<T> findAllByEtat() ;
+	public abstract List<T> findAllByEtat(T object) ;
+	public abstract List<T> findAllByRecherche(T object);
 	public abstract T findCommandeEnCours(String username);
+	public abstract List<T> findHistorique(Utilisateur object);
 }

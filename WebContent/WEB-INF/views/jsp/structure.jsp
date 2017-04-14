@@ -30,6 +30,7 @@
 <head background="http://www.active.com/Assets/Walking/460/diet-detective-walk-for-your-health.jpg">
 <!--  <style type="text/css"> -->
 
+
 <!--     </style> -->
      
 
@@ -46,6 +47,7 @@
 
     <!-- Custom CSS -->
     <link href="css/business-casual.css" rel="stylesheet">
+
 
 
     <!-- Fonts -->
@@ -124,6 +126,7 @@
 				<c:if test="${user.username == null }">
 					<li><a href="subscribe">Subscribe</a></li>
 				</c:if>
+
 
 				<c:if test="${user.username != null }">
 					<li class="dropdown" style="float: right"><a
@@ -217,6 +220,7 @@
 <!-- 		</div> -->
 <!-- 	</nav> -->
 	<script src="js/bootstrap.js"></script>
+
 </body>
 </html>
 
@@ -226,7 +230,7 @@
 	<div class="container">
 		<tiles:insertAttribute name="body" />
 	</div>
-
+<script src="js/bootstrap.js"></script>
 
 </body>
 </html>

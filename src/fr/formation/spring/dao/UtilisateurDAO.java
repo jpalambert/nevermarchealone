@@ -44,12 +44,27 @@ public class UtilisateurDAO extends DAO<Utilisateur> {
 		return this.em.find(Utilisateur.class, username);
 	}
 	@Override
+    public List<Utilisateur> findAllByEtat(Utilisateur user) {
+        return this.em.createQuery("SELECT u FROM Utilisateur u WHERE u.etat='accompagnateur' and u.bavard=:bavardR", Utilisateur.class).setParameter("bavardR",user.getBavard()).getResultList();
+    }
+	
+	@Override
     public List<Utilisateur> findAllByEtat() {
-        return this.em.createQuery("SELECT u FROM Utilisateur u WHERE u.etat='accompagnateur'", Utilisateur.class).getResultList();
+        return this.em.createQuery("SELECT u FROM Utilisateur u WHERE u.etat='accompagnateur' and u.bavard=:bavardR", Utilisateur.class).getResultList();
+    }
+	
+	@Override
+    public List<Utilisateur> findAllByRecherche(Utilisateur user) {
+        return this.em.createQuery("SELECT u FROM Utilisateur u WHERE u.sexe=:sexeR and u.etat='accompagnateur' and u.bavard=:bavardR", Utilisateur.class).setParameter("sexeR",user.getSexe()).setParameter("bavardR",user.getBavard()).getResultList();
     }
 	
 	public Utilisateur findCommandeEnCours (String username){
 		 return this.em.createQuery("SELECT c FROM Commande c WHERE c.commandeEnCours=1 AND c.usernameAcc LIKE :cusUser", Utilisateur.class).getSingleResult();
+	}
+	
+	public List<Utilisateur> findHistorique(Utilisateur u){
+		return this.em.createQuery("SELECT c FROM Commande c WHERE (c.usernameAcc =: custUser OR c.usernameUser =:custUser) "
+				+ "AND (c.latUser<>0)   ", Utilisateur.class).setParameter("custUser", u.getUsername()).getResultList();
 	}
 	
 }
