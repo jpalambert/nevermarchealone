@@ -9,11 +9,6 @@ html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
-h4{
-	font-color:red;
-}
-
-
 body {
   margin: 0;
 }
@@ -4333,16 +4328,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   padding-bottom: 10px;
   line-height: 20px;
 }
-
-
-
-/* Modifs Hugo */
-
-.navbar-nav > li > .bienvenueLogo {
-	margin-left: 1500px;
-}
-
-
 @media (max-width: 767px) {
   .navbar-nav .open .dropdown-menu {
     position: static;
@@ -4366,9 +4351,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     background-image: none;
   }
 }
-
-.
-
 @media (min-width: 768px) {
   .navbar-nav {
     float: left;

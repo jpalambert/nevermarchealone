@@ -73,4 +73,8 @@ public class CommandeDAO extends DAO<Commande> {
         return this.em.createQuery("SELECT c FROM Commande c ", Commande.class).getResultList();
     }
 	
+	@Override
+	public List<Commande> findHistorique(Utilisateur u){
+		return this.em.createQuery("SELECT c FROM Commande c WHERE (c.usernameAcc=:custUser OR c.usernameUser=:custUser) AND (c.latUser<>0)", Commande.class).setParameter("custUser", u.getUsername()).getResultList();
+	}
 }

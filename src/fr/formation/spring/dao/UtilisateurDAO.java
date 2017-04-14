@@ -62,4 +62,9 @@ public class UtilisateurDAO extends DAO<Utilisateur> {
 		 return this.em.createQuery("SELECT c FROM Commande c WHERE c.commandeEnCours=1 AND c.usernameAcc LIKE :cusUser", Utilisateur.class).getSingleResult();
 	}
 	
+	public List<Utilisateur> findHistorique(Utilisateur u){
+		return this.em.createQuery("SELECT c FROM Commande c WHERE (c.usernameAcc =: custUser OR c.usernameUser =:custUser) "
+				+ "AND (c.latUser<>0)   ", Utilisateur.class).setParameter("custUser", u.getUsername()).getResultList();
+	}
+	
 }
