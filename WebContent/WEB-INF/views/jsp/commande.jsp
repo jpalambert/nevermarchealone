@@ -13,9 +13,13 @@
 		</form>
 	</c:when>
 
+	<center>
+	
 	<c:otherwise>
 		<h2>félicitations vous avez reservé ${comcom }</h2>
 	</c:otherwise>
+	
+	</center>
 
 </c:choose>
 
