@@ -40,7 +40,7 @@
 <!-- <link rel="stylesheet" href="css/business-casual.min.css"> -->
 
 <!-- <script src="js/bootstrap.min.js"></script> -->
-<title>Never Marche Alone</title>
+<title >Never Marche Alone</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -73,8 +73,8 @@
        $('.dropdown-toggle').dropdown();
    });
 </script>
-    <div class="brand">Never Marche Alone</div>
-    <div class="address-bar">10 rue ferrari |Marseille 13004 | 08.36.65.65.65</div>
+    <div class="brand" >Never Marche Alone</div>
+    <div class="address-bar">Rue des copains |Marseille 13000 | 08.36.65.65.65</div>
 
     <!-- Navigation -->
     <nav class="navbar navbar-default" role="navigation">

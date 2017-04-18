@@ -60,8 +60,8 @@ html, body {
 			$('.dropdown-toggle').dropdown();
 		});
 	</script>
-	<div class="brand">Never Marche Alone</div>
-	<div class="address-bar">10 rue ferrari |Marseille 13004 |
+	<div class="brand" >Never Marche Alone</div>
+	<div class="address-bar" >rue des copains |Marseille 13000 |
 		08.36.65.65.65</div>
 
 	<!-- Navigation -->
