@@ -19,7 +19,7 @@
 	<table>
 			<tr>
 				<td>
-	<div class="form-group">
+	<div class="form-group col-xs-12 floating-label-form-group controls">
 		<label for="sel1">Je veux me balader pour une durée de :</label> <select
 			class="form-control" id="sel1" name="temps">
 			<option selected>0 - 30min</option>
@@ -33,13 +33,13 @@
 				</td>
 		</table>
 		
-		<br>
+		
 		<table>
 			<tr>
 				<td>
 					<div class="form-group">
-						<label for="sel1">je cherche:</label> <select class="form-control"
-							id="sel1" name="choixsexe">
+						<center><label for="sel1">je cherche:</label> <select class="form-control"
+							id="sel1" name="choixsexe"></center>
 							<option selected value="M">Un homme</option>
 							<option selected value="F">Une femme</option>
 							<option selected value="indifferent">Indifférent</option>
@@ -51,8 +51,8 @@
 			<tr>
 				<td>
 					<div class="form-group">
-						<label for="sel1">qui parle:</label> <select class="form-control"
-							id="sel1" name="parle">
+						<center><label for="sel1">qui parle:</label> <select class="form-control"
+							id="sel1" name="parle"></center>
 							<option selected value="un peu">Un peu</option>
 							<option selected value="beaucoup">Beaucoup</option>
 							<option selected value="passionnement">Passionnément</option>
@@ -64,9 +64,10 @@
 	</div>
 	<table>
 		<tr>
+		<div class="col-lg-4 col-lg-offset-4">
 			<div class="form-group">
-				<label for="sel1">qui peut discuter de:</label><p class="text-info">(maintenir ctrl pour faire plusieur choix)</p> <select multiple
-					class="form-control" id="sel2">
+				<center><label for="sel1">qui peut discuter de:</label><p class="text-info">(maintenir ctrl pour faire plusieur choix)</p> <select multiple
+					class="form-control" ></center>
 					
 
 					<option selected>Sport</option>
@@ -81,23 +82,30 @@
 					<option selected>Autres</option>
 				</select>
 			</div>
+			</div>
 			</tr>
 			</table>
 			<tr>
             <td>
+            <div class="col-lg-2 col-lg-offset-5">
             <div class="form-group">
-  <label for="usr">sur une zone de :</label>
+            <div class="row control-group">
+                           
+  <center><label for="usr">sur une zone de :</label></center>
                 <INPUT TYPE="text" class="form-control" id="usr" placeholder="perimètre (en kilomètres)" name="zone">
-        
-             </div>   
+        </div>  
+        </div>  
+        </div>
+             
             </td>
         </tr>
 	</table>
-
-	<button class="btn btn-default btn-lg" type="submit" value="valider">
+<div class="col-lg-4 col-lg-offset-4">
+	<center><button class="btn btn-default btn-lg" type="submit" value="valider">
 		<span class="glyphicon glyphicon-ok-sign" ></span>
 		valider
-	</button>
+	</button></center>
+	</div>
 </form:form>
 </div></div>
 </center>
