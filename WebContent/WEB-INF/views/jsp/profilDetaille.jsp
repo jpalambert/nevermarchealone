@@ -34,16 +34,17 @@
       <p class="text-info">${usession.description}</p>
 
      <b>Parle :</b>
-      <p class="text-info">${usession.bavard}</p>
+     <p class="text-info"> ${usession.bavard}</p>
       <b>Passions :</b>
        <c:forEach items="${parts}" var="part">
-          <p class="text-info"><c:out value="${part}"/></p>
+          <button class="btn btn-outline-secondary">${part}</button>
        </c:forEach>
    
    </c:otherwise>
 </c:choose>
 
-
+<br>
+<br>
 <c:if test="${cdupost!=1}">
 <a href="accueil"><button class="btn btn-default btn-lg" type="submit"><span class="glyphicon glyphicon-ok-sign"></span>Valider</button></a>
 </c:if>
