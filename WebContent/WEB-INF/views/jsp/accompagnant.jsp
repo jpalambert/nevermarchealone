@@ -1,4 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<div class="box">
+                <div class="col-lg-12"><center>
+
 
 <c:choose>
 	<c:when test="${commandeEnvoi==1}">
@@ -97,10 +100,13 @@
 
 	</c:when>
 	<c:otherwise>
-		<p>Vous êtes actuellement en attente d'un marcheur...</p>
+		<p>Vous ï¿½tes actuellement en attente d'un marcheur...</p>
 		<script>
 		setTimeout(function () { 
 		      location.reload();
 		    }, 3 * 1000);</script>
 	</c:otherwise>
 </c:choose>
+
+</center>
+</div></div>

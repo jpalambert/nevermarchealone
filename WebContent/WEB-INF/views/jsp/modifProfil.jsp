@@ -14,13 +14,13 @@
 
 <br>
 
-	<p>Dites-en nous plus sur vous :</p>
+	<p>Dites-nous en plus sur vous :</p>
 
 	<c:if test="${empty usession.description}">
-		<input type="text" placeholder="decrivez-vous...!" name="description" />
+		<textarea  name="description" placeholder="decrivez-vous...!" rows="4" cols="50"></textarea>
 	</c:if>
 	<c:if test="${not empty usession.description}">
-		<input type="text" value="${usession.description}" name="description" />
+		<textarea name="description" rows="4" cols="50">${usession.description}</textarea>
 	</c:if>
 <br>
 <br>

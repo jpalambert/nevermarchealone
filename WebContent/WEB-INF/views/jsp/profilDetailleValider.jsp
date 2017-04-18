@@ -45,5 +45,5 @@
 
 
 
-<a href="modifProfil"><button class="btn btn-default btn-lg" type="submit"><span class="glyphicon glyphicon-ok-sign"></span>Valider</button></a>
+<a href="accueil"><button class="btn btn-default btn-lg" type="submit"><span class="glyphicon glyphicon-ok-sign"></span>Valider</button></a>
 </div></div></center>

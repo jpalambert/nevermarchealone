@@ -26,5 +26,12 @@ public class BoutonAccueilController {
 
 	}
 
+	@RequestMapping(value = "/accueil", method = RequestMethod.GET)
+	public String connexions(HttpServletRequest req) {
+
+		
+		return "accueil";
+
+	}
 	
 }
