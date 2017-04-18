@@ -2,13 +2,19 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<center><h3>Choisir Never marche Alone, c’est opter pour une marche partagée
+
+
+            <div class="box">
+                <div class="col-lg-12"><center>
+<h4>Choisir Never marche Alone, c’est opter pour une marche partagée
     avec d’autres passagers afin de partager des moments conviviaux ! Le
     principe est simple : un prix fixe et annoncé à l'heure et vous pouvez
-    vous balader. Never Marche Alone est disponible 24h/24, en France.</h3></center>
+    vous balader. Never Marche Alone est disponible 24h/24, en France.</h4></center>
+    </div></div>
     
-    
-</br></br></br>
+
+            <div class="box">
+                <div class="col-lg-12">
 <h4>QUELLE EST LA DIFFÉRENCE ENTRE NEVER MARCHE ALONE ET LES AUTRES
     APPLICATIONS ?</h4>
     
@@ -44,3 +50,5 @@
 <h4>J’AI RENCONTRÉ UN PROBLÈME LORS DE MA COURSE</h4>
 <p>écrivez-nous à l’adresse
     : support@nevermarchealone.com. Nous vous apporterons une réponse au plus vite !</p>
+    
+    </div></div>

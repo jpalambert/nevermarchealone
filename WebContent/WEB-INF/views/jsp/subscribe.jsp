@@ -3,7 +3,8 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 
-
+ <div class="box">
+                <div class="col-lg-12"><center>
 <form:form method="post" action="subscribe" modelAttribute="user">
 	<table>
 		<tr>
@@ -32,24 +33,26 @@
 					value="${user.confirmPassword}" /></td>
 			<td><form:errors class="text-warning" path="confirmPassword" /></td>
 		</tr>
-		<tr>
-			<td><form:radiobutton path="sexe" value="M" /> homme</td>
+		</table>
+		<table style="margin-left: 25px;">
+		<tr style="margin-left: 25px;">
+			<td><form:radiobutton path="sexe" value="M" />Homme</td>
 
 			<td><form:radiobutton path="sexe" value="F" /> Femme</td>
 			<td><form:errors class="text-warning" path="sexe" /></td>
 			
 		</tr>
-		<tr>
-			<td >
-					<button class="btn btn-primary" type="submit">
-						<span class="glyphicon glyphicon-ok-sign" style="color: #4f4;"></span>
-						s'inscrire
+		</table>
+			
+					<button class="btn btn-default btn-lg" type="submit" >
+						<span class="glyphicon glyphicon-ok-sign"></span>
+						S'inscrire
 					</button>
-				</td>
-		</tr>
-	</table>
+				
+		
+
 	<br>
 	<p class="text-info">en vous connectant à ce site vous acceptez automatiquement
 		d'être géolocalisé</p>
-</form:form>
-<tr>
+</form:form></div></div>
+</center>

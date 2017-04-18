@@ -18,18 +18,22 @@ import fr.formation.spring.model.Utilisateur;
 @Controller
 @SessionAttributes("user")
 public class ValidModifProfilController {
-	
+
 	@Autowired
 	private UtilisateurDAO uDAO;
-	
+
 	@RequestMapping(value = "/modifProfilValider", method = RequestMethod.POST)
-	public String modifProfil1(@ModelAttribute("user") Utilisateur utilisateur, BindingResult result,HttpServletRequest req, Model model) {
-		
+	public String modifProfil1(@ModelAttribute("user") Utilisateur utilisateur, BindingResult result,
+			HttpServletRequest req, Model model) {
+
 		HttpSession session = req.getSession();
-		Utilisateur usession= (Utilisateur) session.getAttribute("user");
-		
+		Utilisateur usession = (Utilisateur) session.getAttribute("user");
+
+		String[] parts = usession.getHobbie().split(",");
+		req.setAttribute("parts", parts);
+
 		req.setAttribute("usession", usession);
-		
+
 		usession.setDescription(utilisateur.getDescription());
 		usession.setBavard(utilisateur.getBavard());
 		usession.setHobbie(utilisateur.getHobbie());
@@ -37,6 +41,5 @@ public class ValidModifProfilController {
 
 		return "profilDetailleValider";
 	}
-
 
 }

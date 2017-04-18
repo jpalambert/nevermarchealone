@@ -4,6 +4,8 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 
 
+            <div class="box">
+                <div class="col-lg-12">
 
 <center><h4>Conditions générales d'utilisation du site Never Marche Alone</h4></center>
 </br></br>
@@ -84,6 +86,6 @@ Le site exerce une modération [a priori / a posteriori] sur les publications et
 Le membre reste titulaire de l’intégralité de ses droits de propriété intellectuelle. Mais en publiant une publication sur le site, il cède à la société éditrice le droit non exclusif et gratuit de représenter, reproduire, adapter, modifier, diffuser et distribuer sa publication, directement ou par un tiers autorisé, dans le monde entier, sur tout support (numérique ou physique), pour la durée de la propriété intellectuelle. Le Membre cède notamment le droit d'utiliser sa publication sur internet et sur les réseaux de téléphonie mobile.
 La société éditrice s'engage à faire figurer le nom du membre à proximité de chaque utilisation de sa publication. </p>
 
-
+</div></div>
 
 

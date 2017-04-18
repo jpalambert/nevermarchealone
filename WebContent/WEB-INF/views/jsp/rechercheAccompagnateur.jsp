@@ -3,7 +3,8 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 
-
+<div class="box">
+                <div class="col-lg-12"><center>
 
 <form:form method="post" action="accompagnant">
 <input type="hidden" name="validationCmd" value="0"/>
@@ -25,7 +26,7 @@
         <tr>
               <td>
               <div class="form-group">
-              <label for="sel1">je cherche:</label>
+              <label for="sel1">Je cherche:</label>
                 <select class="form-control" id="sel1" name="choixsexe">
                    <option selected>Un homme</option>
                    <option selected>Une femme</option>
@@ -45,15 +46,16 @@
         <tr>
             <td>
             <div class="form-group">
-  <label for="usr">perimetre de recherche</label>
-                <INPUT TYPE="text" class="form-control" id="usr" placeholder="perimètre (en mètres)" name="zone">
+  <label for="usr">Perimetre de recherche:</label>
+                <INPUT TYPE="text" class="form-control" id="usr" placeholder="perimètre (en km)" name="zone">
         
                 
             </td>
         </tr>
     </table>
     
-       <button class="btn btn-primary" type="submit" value="valider"><span class="glyphicon glyphicon-ok-sign" style="color:#4f4;"></span> valider</button>
+       <button class="btn btn-default btn-lg" type="submit" value="valider"><span class="glyphicon glyphicon-ok-sign"></span> Valider</button>
     
 </form:form>
-
+</div></div>
+</center>

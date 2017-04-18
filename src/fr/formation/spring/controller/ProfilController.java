@@ -23,20 +23,22 @@ import fr.formation.spring.model.Utilisateur;
 @Controller
 public class ProfilController {
 
-	
 	@RequestMapping(value = "/profilDetaille", method = RequestMethod.GET)
 	public String profilDetaille(HttpServletRequest req) {
-		
+
 		HttpSession session = req.getSession();
-		Utilisateur usession= (Utilisateur) session.getAttribute("user");
+		Utilisateur usession = (Utilisateur) session.getAttribute("user");
+
+		String[] parts = usession.getHobbie().split(",");
+		req.setAttribute("parts", parts);
 		req.setAttribute("usession", usession);
 
 		return "profilDetaille";
 	}
-	
+
 	@RequestMapping(value = "/profilDetaille", method = RequestMethod.POST)
 	public String profilDetaille1(HttpServletRequest req) {
-		
+
 		req.setAttribute("profiler", req.getParameter("profil"));
 		req.setAttribute("profilerprenom", req.getParameter("profilprenom"));
 		req.setAttribute("profilernom", req.getParameter("profilnom"));
@@ -44,10 +46,8 @@ public class ProfilController {
 		req.setAttribute("profilerdescription", req.getParameter("profildescription"));
 		req.setAttribute("profilerhobbie", req.getParameter("profilhobbie"));
 		req.setAttribute("cdupost", 1);
-		
 
 		return "profilDetaille";
 	}
-	
-	
+
 }

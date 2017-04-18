@@ -81,11 +81,11 @@ System.out.println(utilisateur.getUsername());
 				if (utilisateur.getEtat().equals("accompagnateur")) {
 					
 					System.out.println("Bravo, tu es connecte!");
-					return "rechercheAccompagnateur";
+					return "accueil";
 				} else {
 				
 					System.out.println("Bravo, tu es connecte!");
-					return "rechercheUtilisateur";
+					return "accueil";
 				}
 
 			} else {

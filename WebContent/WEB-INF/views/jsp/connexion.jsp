@@ -13,7 +13,8 @@
 	
 </script>
 <center>
-	</br> </br>
+	<div class="box">
+                <div class="col-lg-12">
 	<form:form method="post" action="connexion" modelAttribute="user">
 		<script>
 			// Note: This example requires that you consent to location sharing when
@@ -81,16 +82,7 @@
 					</tr>
 </div>
 								</div>
-								<div class="row">
-									<div
-										class="form-group col-xs-12 floating-label-form-group controls">
-										<td><form:radiobutton path="etat" value="accompagnateur" />
-											je souhaite accompagner</td>
-
-										<td><form:radiobutton path="etat" value="accompagne"
-												checked="checked" /> je souhaite être accompagné</td>
-									</div>
-								</div>
+								
 										<div class="row">
 									<div
 										class="form-group col-xs-12 floating-label-form-group controls">
@@ -105,13 +97,22 @@
 													placeholder="latitude" path="lat" value="" /></td>
 									</div>
 								</div>
-								
+								<div class="row">
+									<div
+										class="form-group col-xs-12 floating-label-form-group controls">
+										<td><form:radiobutton path="etat" value="accompagnateur" />
+											Je souhaite accompagner</td>
+
+										<td  style="margin-left: 25px;"><form:radiobutton path="etat" value="accompagne"
+												checked="checked"/> Je souhaite être accompagné</td>
+									</div>
+								</div>
 
 								<br>
 								<div id="success"></div>
 								<div class="row">
 									<div class="form-group col-xs-12">
-										<button type="submit" class="btn btn-success btn-lg">envoyer</button>
+										<button type="submit" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-ok-sign""></span> Envoyer</button>
 									</div>
 								</div>
 						</form>
@@ -120,60 +121,19 @@
 			</div>
 		</section>
 
-
-
-		<!-- 		<table> -->
-
-		<!-- 			<tr> -->
-		<%-- 				<td><form:label path="username">Username</form:label></td> --%>
-		<%-- 				<td><form:input class="form-control" placeholder="username" --%>
-		<%-- 						path="username" value="${user.username}" /> --%>
-		<!-- 						</td> -->
-		<%-- 				<td><form:errors class="text-warning" path="username" /></td> --%>
-		<!-- 			</tr> -->
-		<!-- 			<tr> -->
-
-		<%-- 				<td><form:label path="password">Password</form:label></td> --%>
-		<%-- 				<td><form:password class="form-control" placeholder="password" --%>
-		<%-- 						path="password" value="${user.password}" /></td> --%>
-		<%-- 				<td><form:errors class="text-warning" path="password" /></td> --%>
-		<!-- 			</tr> -->
-		<!-- 			<tr> -->
-		<%-- 				<td><form:radiobutton path="etat" value="accompagnateur" /> je --%>
-		<!-- 					souhaite accompagner </td> -->
-
-		<%-- 				<td><form:radiobutton path="etat" value="accompagne" checked="checked"/> je --%>
-		<!-- 					souhaite être accompagné</td> -->
-		<!-- 			</tr> -->
-		<!-- 			<tr> -->
-		<%-- 				<td><form:label path="lng">Longitude</form:label></td> --%>
-		<%-- 				<td><form:input class="form-control" placeholder="longitude" --%>
-		<%-- 						path="lng" value="" /></td>  --%>
-		<!-- 			</tr> -->
-		<!-- 			<tr> -->
-		<%-- 				<td><form:label path="lat">Latitude</form:label></td> --%>
-		<%-- 				<td><form:input class="form-control" placeholder="latitude" --%>
-		<%-- 			path="lat" value="" /></td>  --%>
-
-
-		<!-- 			</tr> -->
-		<!-- 			<td> -->
-		<!-- 				<div class="btn pull-right"> -->
-		<!-- 					<button class="btn btn-primary" type="submit"> -->
-		<!-- 						<span class="glyphicon glyphicon-ok-sign" style="color: #4f4;"></span> -->
-		<!-- 						Envoyer -->
-		<!-- 					</button> -->
-		<!-- 				</div> -->
-		<!-- 			</td> -->
-		<!-- 		</table> -->
-
 	</form:form>
-</center>
+
+	</div></div>
+
+
 <!--  -->
 
 
-
+<div class="box">
+                <div class="col-lg-12">
 <h4>
-	<a href="<c:url value='/subscribe' />" style="float: right">je ne
+	<a href="<c:url value='/subscribe' />">je ne
 		possède pas de compte, je souhaite m'inscrire</a>
 </h4>
+	</div></div>
+	</center>

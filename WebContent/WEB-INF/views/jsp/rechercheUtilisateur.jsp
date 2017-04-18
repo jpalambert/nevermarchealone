@@ -3,7 +3,8 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 
-
+<div class="box">
+                <div class="col-lg-12"><center>
 
 <form:form method="post" action="map">
 
@@ -15,6 +16,9 @@
 
 	<%-- <td><form:radiobutton path="etat" value="accompagnateur" />Accompagner</td>
       <td><form:radiobutton path="etat" value="accompagne" />Etre accompagne</td> --%>
+	<table>
+			<tr>
+				<td>
 	<div class="form-group">
 		<label for="sel1">Je veux me balader pour une durée de :</label> <select
 			class="form-control" id="sel1" name="temps">
@@ -24,7 +28,12 @@
 			<option selected>1h30 - 2h00</option>
 			<option selected>2h00 - 2h30</option>
 			<option selected>2h30 - 3h00</option>
-		</select> <br>
+		</select> 
+		</div>
+				</td>
+		</table>
+		
+		<br>
 		<table>
 			<tr>
 				<td>
@@ -73,6 +82,7 @@
 				</select>
 			</div>
 			</tr>
+			</table>
 			<tr>
             <td>
             <div class="form-group">
@@ -84,10 +94,10 @@
         </tr>
 	</table>
 
-	<button class="btn btn-primary" type="submit" value="valider">
-		<span class="glyphicon glyphicon-ok-sign" style="color: #4f4;"></span>
+	<button class="btn btn-default btn-lg" type="submit" value="valider">
+		<span class="glyphicon glyphicon-ok-sign" ></span>
 		valider
 	</button>
 </form:form>
-
-
+</div></div>
+</center>

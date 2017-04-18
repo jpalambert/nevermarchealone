@@ -74,7 +74,7 @@
    });
 </script>
     <div class="brand">Never Marche Alone</div>
-    <div class="address-bar">10 rue ferrari |Marseille 13004 | 00.00.00.00.00</div>
+    <div class="address-bar">10 rue ferrari |Marseille 13004 | 08.36.65.65.65</div>
 
     <!-- Navigation -->
     <nav class="navbar navbar-default" role="navigation">
@@ -115,14 +115,17 @@
 							class="glyphicon glyphicon-search" aria-hidden="true"></span></a></li>
 				</c:if>
 
+<li class="dropdown" >
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Infos <span class="glyphicon glyphicon-info-sign"
+							aria-hidden="true"></span><span class="caret"></span>
 
-				<li><a href="about">About <span
-						class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a></li>
-				<li><a href="cgu">C.G.U. <span
-						class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a></li>
-				<li><a href="faq">F.A.Q. <span
-						class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a></li>
-
+					</a>
+					<ul class="dropdown-menu">
+				<li><a href="about"><center>About</center></a></li>
+				<li><a href="cgu"><center>C.G.U.</center></a></li>
+				<li><a href="faq"><center>F.A.Q.</center></a></li>
+						</ul>
+</li>
 				<c:if test="${user.username == null }">
 					<li><a href="subscribe">Subscribe</a></li>
 				</c:if>

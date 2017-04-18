@@ -3,11 +3,14 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <center>
+
+ <div class="box">
+                <div class="col-lg-12"><center>
 <form method="post" action="modifProfilValider" model="user">
 
 
 
-	<h1>Modifier vos informations ${user.prenom} ${user.nom}</h1>
+	<h1>Modifier vos informations</h1>
 
 <br>
 
@@ -154,11 +157,12 @@
 		</table>
 <%-- 		</c:if> --%>
 		
-				<div class="btn pull-right"  style="padding: 25px; margin-right: 700px;">
-					<button class="btn btn-primary" type="submit" >
-						<span class="glyphicon glyphicon-ok-sign" style="color: #4f4;"></span>
+				<div class="btn pull-right"  style="padding: 25px; margin-right: 43%;">
+					<button class="btn btn-default btn-lg" type="submit" >
+						<span class="glyphicon glyphicon-ok-sign"></span>
 						modifier
 					</button>
 				</div>
 	
-</form></center>
+</form>
+</div></div></center>
