@@ -1,11 +1,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<div class="box">
-                <div class="col-lg-12"><center>
+
 
 
 <c:choose>
 	<c:when test="${commandeEnvoi==1}">
 		<div id="map"></div>
+		<div class="box">
+                <div class="col-lg-12"><center>
 		<h1>${utilisateur.usernameUser}vient de vous reserver!</h1>
 		<form method="get" action="accompagnant">
 			<input type="submit" value="Valider"/>
@@ -100,6 +101,8 @@
 
 	</c:when>
 	<c:otherwise>
+	<div class="box">
+                <div class="col-lg-12"><center>
 		<p>Vous �tes actuellement en attente d'un marcheur...</p>
 		<script>
 		setTimeout(function () { 
