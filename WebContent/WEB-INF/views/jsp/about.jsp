@@ -1,7 +1,7 @@
-<img width=100% height=60% src="http://madressenza.com.br/upload/froala/a641511014350eb4e8b9e3b2e0227132ac95c3dc-amigos.jpg" style="margin-right:300px;">
 
 
-</br></br></br></br></br></br></br>
+
+
 <div class="box">
                 <div class="col-lg-12">
 
@@ -14,12 +14,23 @@ Ne voulant pas etre concurrencer par les sites de rencontres justement, et s'app
 Let s marche with us !
 </p>
 
+<figure>
+<img width=640px height=480px  src="http://reho.st/self/a656e46f6b7ba151bf27109585e9988875f37d96.jpg" />
 
-<img width=280px height=270px class="img-responsive img-border img-left" src="../img/groupe.jpg" />
-
-
+<figcaption > De gauche à droite l'équipe Never Marche Alone : David Vernier, Hugo Humbert, Camille Longchamp, Jean-Philippe Lambert<br></figcaption></figure>
+</div></div>
 </center>
 
 
+<div class="box">
+                <div class="col-lg-12">
+<center>
+<u><h4>Nous contacter</h4></u>
+Rue des copains <br>
+Marseille 13000 <br>
+info@nevermarchealone.com<br>
+08.36.65.65.65
+</center>
 
 </div></div>
+

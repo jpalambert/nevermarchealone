@@ -44,7 +44,7 @@ public class AccountController {
 	
 
 	@RequestMapping(value = "/subscribe", method = RequestMethod.POST)
-	public String subscribe(@Valid @ModelAttribute("user") FormUser formUser, BindingResult result, Model model) {
+	public String subscribe(@Valid @ModelAttribute("user") FormUser formUser, BindingResult result, Model model, HttpServletRequest req) {
 		utilisateurValidator.validate(formUser, result);
 		if (result.hasErrors()) {
 			System.out.println("Validation errors:");
@@ -53,7 +53,8 @@ public class AccountController {
 			}
 			return "subscribe";
 		}
-		
+	HttpSession session = req.getSession();
+	session.setAttribute("structure", 0);
 		System.out.println(formUser.getNom());
 		formUser.setBavard("");
 		formUser.setDescription("");

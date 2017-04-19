@@ -73,9 +73,7 @@
        $('.dropdown-toggle').dropdown();
    });
 </script>
-    <div class="brand" >Never Marche Alone</div>
-    <div class="address-bar">Rue des copains |Marseille 13000 | 08.36.65.65.65</div>
-
+    <div class="brand" style="text-shadow: 3px 3px 15px grey;" >Never Marche Alone</div>
     <!-- Navigation -->
     <nav class="navbar navbar-default" role="navigation">
         <div class="container">
@@ -126,12 +124,12 @@
 				<li><a href="faq"><center>F.A.Q.</center></a></li>
 						</ul>
 </li>
-				<c:if test="${user.username == null }">
+				<c:if test="${user.username == null && structure==0 }">
 					<li><a href="subscribe">Subscribe</a></li>
 				</c:if>
 
 
-				<c:if test="${user.username != null }">
+				<c:if test="${user.username != null && structure!=0 }">
 					<li class="dropdown" style="float: right"><a
 						class="dropdown-toggle" data-toggle="dropdown" href="#">Bienvenue
 							${user.username} <span class="glyphicon glyphicon-user"
