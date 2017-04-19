@@ -100,7 +100,7 @@
 
 	</c:when>
 	<c:otherwise>
-		<p>Vous �tes actuellement en attente d'un marcheur...</p>
+		<p>Vous etes actuellement en attente d'un marcheur...</p>
 		<script>
 		setTimeout(function () { 
 		      location.reload();
