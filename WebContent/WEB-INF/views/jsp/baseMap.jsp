@@ -60,9 +60,8 @@ html, body {
 			$('.dropdown-toggle').dropdown();
 		});
 	</script>
-	<div class="brand" >Never Marche Alone</div>
-	<div class="address-bar" >rue des copains |Marseille 13000 |
-		08.36.65.65.65</div>
+	<div class="brand" style="text-shadow: 3px 3px 15px grey;" >Never Marche Alone</div>
+	
 
 	<!-- Navigation -->
 	<nav class="navbar navbar-default" role="navigation">

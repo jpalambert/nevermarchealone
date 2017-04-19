@@ -44,7 +44,7 @@ public class ProfilController {
 		req.setAttribute("profilernom", req.getParameter("profilnom"));
 		req.setAttribute("profilerbavard", req.getParameter("profilbavard"));
 		req.setAttribute("profilerdescription", req.getParameter("profildescription"));
-		req.setAttribute("profilerhobbie", req.getParameter("profilhobbie"));
+		req.setAttribute("profilerhobbie", req.getParameter("profilhobbie").split(","));
 		req.setAttribute("cdupost", 1);
 
 		return "profilDetaille";

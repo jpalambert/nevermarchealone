@@ -20,7 +20,10 @@
        <b> <u>parle : </u></b>
        <p class="text-info">${profilerbavard}</p>
        <b> <u>passions :</u></b>
-       <p class="text-info">${profilerhobbie}</p>
+       <c:forEach items="${profilerhobbie}" var="part">
+          <button class="btn btn-outline-secondary">${part}</button>
+       </c:forEach>
+   
    
    </c:when>
 
@@ -36,8 +39,8 @@
      <b>Parle :</b>
       <p class="text-info">${usession.bavard}</p>
       <b>Passions :</b>
-       <c:forEach items="${parts}" var="part">
-          <p class="text-info"><c:out value="${part}"/></p>
+        <c:forEach items="${parts}" var="part">
+          <button class="btn btn-outline-secondary">${part}</button>
        </c:forEach>
    
    </c:otherwise>

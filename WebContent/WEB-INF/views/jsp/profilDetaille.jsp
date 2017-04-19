@@ -20,7 +20,9 @@
        <b> <u>parle : </u></b>
        <p class="text-info">${profilerbavard}</p>
        <b> <u>passions :</u></b>
-       <p class="text-info">${profilerhobbie}</p>
+      <c:forEach items="${profilerhobbie}" var="part">
+          <button class="btn btn-outline-secondary">${part}</button>
+       </c:forEach>
    
    </c:when>
 
